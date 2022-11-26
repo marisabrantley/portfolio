@@ -28,12 +28,12 @@ html {
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: #ffffff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: #ffffff;
   text-shadow: none;
 }
 
@@ -86,6 +86,111 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+/* General Styles */
+
+body {
+  font-size: 1em;
+  font-family: 'Cardo', serif;
+  
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3,
+h4 {
+  font-size: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+.content-wrapper {
+  width: 90%;
+  margin: 45px auto;
+}
+
+/* ------------------------ Base Header-Footer Styles --------------------- */
+ 
+header {
+  background-color: #01285d;
+  color: white;
+  text-align: center;
+  padding: 10px 0 70px 0;
+  margin: 0;
+}
+
+header .content-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: row wrap;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 75%; 
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
+
+header .name-title h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 50px 0 0;
+  margin-bottom: 15px;
+}
+
+header .name-title h4 {
+  font-size: 1.2em;
+  font-weight: 300;
+  padding: 0 30px 30px;
+  margin-top: 0;
+}
+
+header button {
+  background-color: pink;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 8px 20px;
+  text-transform: uppercase;
+
+}
+
+   
 
 /* ==========================================================================
    Helper classes
