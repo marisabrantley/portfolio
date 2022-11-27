@@ -91,7 +91,7 @@ textarea {
 
 body {
   font-size: 1em;
-  font-family: 'Cardo', serif;
+  font-family: 'Montserrat', sans-serif;
   
 }
 
@@ -110,27 +110,37 @@ h1 {
 
 h2 {
   font-size: 2em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Cardo', serif;
+  text-align: center;
 }
 
-h3,
+h3 {
+  font-size: 1.8em;
+  font-family: 'Cardo', serif;
+}
+
+
 h4 {
-  font-size: 1.4em;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-family: 'Cardo', serif;
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1em;
+  font-weight: 300;
 }
 
 .content-wrapper {
-  width: 90%;
-  margin: 45px auto;
+  width: 86%;
+  margin: 10px auto;
 }
 
 /* ------------------------ Base Header-Footer Styles --------------------- */
  
-header {
+/* Header Styles */
+
+header, 
+footer {
   background-color: #01285d;
   color: white;
   text-align: center;
@@ -144,6 +154,8 @@ header .content-wrapper {
   text-align: center;
   flex-flow: row wrap;
 }
+
+/* Navigation */
 
 header nav {
   display: flex;
@@ -167,6 +179,7 @@ header li {
 }
 
 header .name-title h1 {
+  font-family: 'Cardo', serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 50px 0 0;
@@ -174,23 +187,147 @@ header .name-title h1 {
 }
 
 header .name-title h4 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2em;
   font-weight: 300;
-  padding: 0 30px 30px;
+  padding: 0 34px 34px;
   margin-top: 0;
 }
 
 header button {
+  display: flex;
+  align-items: center;
   background-color: pink;
   border: none;
-  border-radius: 8px;
+  border-radius: 15px;
+  color: #01285d;
+  cursor: pointer;
   font-family: 'Montserrat', sans-serif;
-  padding: 8px 20px;
+  font-size: .9em;
+  font-weight: bold;
+  padding: 8px 18px;
   text-transform: uppercase;
-
+  transition-duration: 0.4s;
 }
 
-   
+button:hover {
+  background-color: rgb(254, 153, 170)
+}
+
+/* Footer Styles */
+
+footer {
+  line-height: 2em;
+  padding: 16px;
+}
+
+footer span {
+  color: pink;
+}
+
+/* ------------------------ Mobile Styles - Homepage --------------------- */
+
+/* About Section */
+
+.about .content-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.about-wrapper figure {
+  width: 100%;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.about img {
+  width: 100%; 
+  padding-bottom: 20px;
+}
+
+.about-me h3 {
+  font-weight: 400;
+  text-align: center;
+}
+
+.about-me h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.about-me span {
+  font-weight: 500;
+}
+
+/* Projects Section */
+
+.projects .projects-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.projects .projects-header {
+  margin-bottom: 55px;
+}
+
+.projects .project-piece {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding-bottom: 55px;
+}
+
+.projects figure {
+  width: 100%;
+  margin: 0;
+}
+
+.projects img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: drop-shadow(0 0 0.75rem	#d3d3d3);
+  
+}
+
+
+.projects .project-description {
+  padding-bottom: 16px;
+}
+
+.projects .project-piece p {
+  margin: 0;
+}
+
+.projects .project-piece span {
+  font-weight: bold;
+}
+
+.projects button {
+  background-color: pink;
+  border: none;
+  border-radius: 15px;
+  color: #01285d;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 14px 40px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  transition-duration: 0.4s;
+}
+
+.projects button:hover {
+  background-color: rgb(254, 153, 170)
+}
+
+
+
 
 /* ==========================================================================
    Helper classes
