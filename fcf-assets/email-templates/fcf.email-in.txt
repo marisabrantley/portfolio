@@ -1,0 +1,6 @@
+New message from website form is below.
+    
+    
+Your name: {Name}
+Your email address: {Email}
+Your message: {Message}

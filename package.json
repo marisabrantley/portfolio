@@ -1,10 +1,10 @@
 {
-  "name": " ",
+  "name": "Marisa Brantley Portfolio",
   "version": "0.0.1",
-  "description": "",
-  "keywords": "",
+  "description": "Portolio Website of Marisa Brantley",
+  "keywords": "web developer",
   "license": "",
-  "author": "",
+  "author": "Narisa Brantley",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",

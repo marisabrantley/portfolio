@@ -1,0 +1,6 @@
+Thank you for your message, we will be in touch soon.
+    
+    
+Your name: {Name}
+Your email address: {Email}
+Your message: {Message}

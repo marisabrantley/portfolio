@@ -1,12 +1,12 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "Marisa's Portfolio",
+  "name": "Marisa Brantley's Portfolio",
   "icons": [{
-    "src": "icon.png",
+    "src": "marisa-brantley0-logo.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "www.marisabrantley.com",
   "background_color": "#fafafa",
   "theme_color": "#fafafa"
 }
