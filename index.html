@@ -15,19 +15,18 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="marisa-brantley-logo" href="icon.png">
 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <meta name="theme-color" content="#fafafa">
-
 </head>
 
 <body>
-  
   <header>
     <div class="content-wrapper">
       <nav>
@@ -40,14 +39,14 @@
       <div class="name-title">
         <h1>Marisa Brantley</h1>
         <h4>Frontend Web Developer & UI Designer</h4>
+        <a href="#contact" id="contact-link">contact me</a>
       </div>
-      <button type="button">contact me<a href="#contact"></a></button>
     </div>  
   </header>
 
   <main>
 
-    <section class="about">
+    <section id="about">
       <div class="content-wrapper">
         <div class="about-wrapper">
           <figure>
@@ -68,7 +67,6 @@
             <p>
               <span>Can't wait to work with you!</span>
             </p>
-          </div>
         </div>
       </div>  
     </section>
@@ -87,8 +85,7 @@
             <p class="project-description">A greenfield interactive React app built with multiple components to allow users to create sticky notes, as well as edit, search through, save, and delete them.</p>
             <p><span>Skills: </span>React, JSX, Components</p>
             <p><span>Tools: </span>Props, State, GitHub Pages, Visual Studio Code, CodeSandbox</p>
-            <div class="piece-button"></div>
-              <button type="button">Live Page<a href="https://marisabrantley.github.io/sticky-notes-app/" target="_blank""></a></button>
+            <a class="project-link" href="https://marisabrantley.github.io/sticky-notes-app/" target="_blank">See It Here</a>
           </div>
 
           <div class="project-piece">
@@ -101,7 +98,7 @@
             <p class="project-description">This GitHub Repo Gallery project pulls data from GitHub API calls to populate username, bio, location, number of public repos, and individual repo information, which can be clicked on or searched using dynamic search functionality.</p>
             <p><span>Skills: </span>JavaScript</p>
             <p><span>Tools: </span>Rest API, GitHub Pages, Visual Studio Code, CodeSandbox</p>
-            <a class="project-link" href="https://marisabrantley.github.io/github-repo-gallery/" target="_blank">Live Page</a>
+            <a class="project-link" href="https://marisabrantley.github.io/github-repo-gallery/" target="_blank">See It Here</a>
           </div> 
 
           <div class="project-piece">
@@ -114,14 +111,14 @@
             <p class="project-description">Players guess the word by entering one letter at a time. If the player guesses all the letters correctly before they use up their allotted guesses, they win!</p>
             <p><span>Skills: </span>JavaScript</p>
             <p><span>Tools: </span>GitHub Pages, JSON, Visual Studio Code, CodeSandbox</p>
-            <a class="project-link" href="https://marisabrantley.github.io/guess-the-word/" target="_blank">Live Page</a>
+            <a class="project-link" href="https://marisabrantley.github.io/guess-the-word/" target="_blank">See It Here</a>
           </div> 
         
         </div>
       </div>  
     </article>
 
-    <section class="skills">
+    <article class="skills">
       <div class="content-wrapper">
         <h2 class="skills-header">My Skills</h2>
         <h4>Developer Skills</h4>
@@ -145,9 +142,10 @@
         <p class="tool">Canva</p>
 
       </div>
+     </article> 
   </main>
 
-  <div id="contact-me">
+  <div id="contact">
     <div class="content-wrapper">
         <h2>Contact Me</h2>
         <h4>Let's connect!</h4>

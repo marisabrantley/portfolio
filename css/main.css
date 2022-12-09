@@ -87,16 +87,22 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* General Styles */
+/* GENERAL STYLES */
 
+html {
+  font-size: 16px;
+}
 body {
   font-size: 1em;
   font-family: 'Montserrat', sans-serif;
-  
+  background-color: white;
 }
 
-ul {
+ul,
+ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -104,36 +110,78 @@ a {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 300;
+  font-family: 'Cardo', serif;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.9rem;
   font-family: 'Cardo', serif;
   text-align: center;
+  width: 100%;
 }
 
 h3 {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-family: 'Cardo', serif;
+  width: 100%;
 }
 
 
 h4 {
-  font-size: 1.5em;
-  font-family: 'Cardo', serif;
+  font-size: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 300;
+  width: 100%;
+}
+
+a:hover {
+  background-color: rgb(254, 153, 170)
+}
+
+
+/* STRUCTURAL STYLES */
+
+header,
+#about,
+#project,
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .content-wrapper {
   width: 86%;
   margin: 10px auto;
 }
+
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  padding: 10px 0 100px 0;
+}
+
+footer {
+  padding: 16px;
+}
+
 
 /* ------------------------ Base Header-Footer Styles --------------------- */
  
@@ -143,82 +191,53 @@ header,
 footer {
   background-color: #01285d;
   color: white;
-  text-align: center;
-  padding: 10px 0 70px 0;
-  margin: 0;
+  text-align: center;  
 }
 
-header .content-wrapper {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-flow: row wrap;
-}
 
 /* Navigation */
-
-header nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row wrap;
-  width: 75%; 
-}
 
 header nav ul {
   display: flex;
   justify-content: space-around;
-  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-header li {
+header nav ul li {
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
 }
 
 header .name-title h1 {
-  font-family: 'Cardo', serif;
-  text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 50px 0 0;
-  margin-bottom: 15px;
+  padding: 70px 0 0;
+  margin-bottom: 10px;
 }
 
 header .name-title h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2em;
   font-weight: 300;
-  padding: 0 34px 34px;
   margin-top: 0;
+  padding-bottom: 15px;
 }
 
-header button {
-  display: flex;
-  align-items: center;
-  background-color: pink;
-  border: none;
-  border-radius: 15px;
+header #contact-link {
+  text-align: center;
+  font-size: .9rem;
   color: #01285d;
-  cursor: pointer;
+  background-color: pink;
   font-family: 'Montserrat', sans-serif;
-  font-size: .9em;
   font-weight: bold;
-  padding: 8px 18px;
   text-transform: uppercase;
+  border-radius: 15px;
+  padding: 8px 18px;
   transition-duration: 0.4s;
-}
-
-button:hover {
-  background-color: rgb(254, 153, 170)
 }
 
 /* Footer Styles */
 
 footer {
-  line-height: 2em;
-  padding: 16px;
+  line-height: 1.8rem;
 }
 
 footer span {
@@ -229,31 +248,22 @@ footer span {
 
 /* About Section */
 
-.about .content-wrapper {
+#about .content-wrapper {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
 }
 
 .about-wrapper figure {
-  width: 100%;
-  margin: 0;
   padding-top: 40px;
 }
 
-.about img {
-  width: 100%; 
+#about img {
   padding-bottom: 20px;
 }
 
-.about-me h3 {
-  font-weight: 400;
-  text-align: center;
-}
-
+.about-me h3,
 .about-me h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.25em;
   font-weight: 400;
   text-align: center;
 }
@@ -264,36 +274,31 @@ footer span {
 
 /* Projects Section */
 
-.projects .projects-wrapper {
+.projects {
   display: flex;
-  justify-content: center;
   flex-flow: row wrap;
 }
 
-.projects .projects-header {
-  margin-bottom: 55px;
+.projects .content-wrapper {
+  border-top: .8px solid #01285d;
+  border-bottom: .8px solid #01285d;
 }
 
 .projects .project-piece {
   display: flex;
-  justify-content: center;
   flex-flow: row wrap;
   padding-bottom: 55px;
 }
 
-.projects figure {
-  width: 100%;
-  margin: 0;
-}
-
 .projects img {
-  width: 100%;
   height: auto;
   object-fit: cover;
   filter: drop-shadow(0 0 0.75rem	#d3d3d3);
-  
 }
 
+.project-piece h4 {
+  text-align: center;
+}
 
 .projects .project-description {
   padding-bottom: 16px;
@@ -307,24 +312,28 @@ footer span {
   font-weight: bold;
 }
 
-.projects button {
-  background-color: pink;
-  border: none;
-  border-radius: 15px;
+.project-link {
+  text-align: center;
   color: #01285d;
-  cursor: pointer;
+  background-color: pink;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
   font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-size: 1rem;
   padding: 14px 40px;
   margin-top: 30px;
-  text-transform: uppercase;
-  transition-duration: 0.4s;
 }
 
-.projects button:hover {
-  background-color: rgb(254, 153, 170)
+
+/* Skills Section */
+
+.skills .content-wrapper {
+  border-bottom: .8px solid #01285d;
 }
+
+
+/* Contact Section */
 
 
 
