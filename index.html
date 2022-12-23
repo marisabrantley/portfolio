@@ -31,13 +31,13 @@
     <div class="content-wrapper">
       <nav>
         <ul>
-          <li><a hef="#about">About</a></li>
-          <li><a hef="#projects">Projects</a></li>
-          <li><a hef="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
         </ul>
       </nav>
       <div class="name-title">
-        <h1>Marisa Brantley</h1>
+        <h1 class="typewriter" aria-label="Marisa Brantley">Marisa Brantley</h1>
         <h4>Frontend Web Developer & UI Designer</h4>
         <a href="#contact" id="contact-link">contact me</a>
       </div>
@@ -45,33 +45,36 @@
   </header>
 
   <main>
-
-    <section id="about">
-      <div class="content-wrapper">
-        <div class="about-wrapper">
-          <figure>
-            <img src="img/marisa-brantley.jpeg" alt="Photo of Marisa Brantley">
-          </figure>
-          <div class="about-me">
-            <h3>
-              Hi! I'm Marisa Brantley.
-            </h3>
-            <h4>I'm a Frontend Developer and UI Designer who empathecially creates accessible, intuitive, engaging, functional, and aesthetically pleasing websites.</h4>
-            <p class="about-text">
-              My coding journey began out of impatience with my husband to make a website for my online retail business. I took the initiative to learn to do it myself, and my love of coding bloomed.
-            </p>
-            <p>   
-              I love creating websites… selecting the perfect colors, layouts, and images, to using clean and efficient code that will convey the most enjoyable, effective, and visually appealing experiences for users.
-              With backgrounds in law and e-commerce, I appreciate details, meeting deadlines, clear communication, and making businesses’  visions come to life.
-            </p>
-            <p>
-              <span>Can't wait to work with you!</span>
-            </p>
-        </div>
-      </div>  
+    <article class="portfolio">
+    
+      <section id="about">
+        <div class="content-wrapper">
+          <div class="about-wrapper">
+            <figure>
+              <img src="img/marisa-brantley.jpeg" alt="Photo of Marisa Brantley">
+            </figure>
+            <div class="about-me">
+              <h3>
+                Hi! I'm Marisa Brantley.
+              </h3>
+              </div>
+                <h4>I'm a Frontend Developer and UI Designer who empathecially creates accessible, intuitive, engaging, functional, and aesthetically pleasing websites.</h4>
+              <p class="about-text">
+                My coding journey began out of impatience with my husband to make a website for my online retail business. I took the initiative to learn to do it myself, and my love of coding bloomed.
+              </p>
+              <p>   
+                I love creating websites… selecting the perfect colors, layouts, and images, to using clean and efficient code that will convey the most enjoyable, effective, and visually appealing experiences for users.
+                With backgrounds in law and e-commerce, I appreciate details, meeting deadlines, clear communication, and making businesses’  visions come to life.
+              </p>
+              <p>
+                <span>Can't wait to work with you!</span>
+              </p>
+            </div>
+          </div>
+        </div>  
     </section>
 
-    <article class="projects">
+    <section id="projects">
       <div class="content-wrapper">
         <h2 class="projects-header">My Works</h2>
         <div class="projects-wrapper">
@@ -116,9 +119,9 @@
         
         </div>
       </div>  
-    </article>
+    </section>
 
-    <article class="skills">
+    <section id="skills">
       <div class="content-wrapper">
         <h2 class="skills-header">My Skills</h2>
         <h4>Developer Skills</h4>
@@ -127,111 +130,126 @@
           <p class="skill">JavaScript</p>
           <p class="skill">Git and GitHub</p>
           <p class="skill">Responsive Web Development</p>
-          <p class="skill">Sass</p>
+          <p class="skill">SASS</p>
           <p class="skill">HTML and CSS</p>
           <p class="skill">WordPress</p>
-          <p class="skill">Enthusiastic Problem-solver</p>
-          <p class="skill">Dependable Team Player</p>
         </div>
         <h4>Tech Stack</h4>
-        <div class="tools-wrapper"></div>
-        <p class="tool">Git and GitHub</p>
-        <p class="tool">Chrome DevTools</p>
-        <p class="tool">Visual Studio Code</p>
-        <p class="tool">Adobe Creative Suite</p>
-        <p class="tool">Canva</p>
-
+        <div class="tools-wrapper">
+          <p class="tool">Git and GitHub</p>
+          <p class="tool">Chrome DevTools</p>
+          <p class="tool">Visual Studio Code</p>
+          <p class="tool">Adobe Creative Suite</p>
+          <p class="tool">Figma</p>
+          <p class="tool">Canva</p>
+        </div>
       </div>
-     </article> 
+    </section>
+
+  </article>
+
   </main>
 
   <div id="contact">
     <div class="content-wrapper">
-        <h2>Contact Me</h2>
-        <h4>Let's connect!</h4>
-        <div class="contact-info">
-          <p class="fontawesome-icon-contact"><i class="fa-solid fa-location-dot"></i>
-            <p>Orange County, California</p>
-          </p>
-          <p class="fontawesome-icon-contact"><i class="fa-solid fa-mobile-screen-button"></i>
-            <p>(949) 342-6820‬</p>
-          </p> 
-          <p class="fontawesome-icon-contact"><i class="fa-solid fa-envelope"></i>
-            <p>marisakbrantley@gmail.com</p>
-          </p>
-        </div>
+      <h2>Contact Me</h2>
+      <h4>Let's connect!</h4>
+      <div class="contact-info">
+        <ul class="location">
+          <li>
+            <a href="https://www.google.com/maps/place/Orange+County,+CA/@33.640814,-117.7803964,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+          </li>
+            <a href="https://www.google.com/maps/place/Orange+County,+CA/@33.640814,-117.7803964,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428" target="_blank">Orange County, California</a>
+          </li>
+        </ul>
+        <ul class="telephone">
+          <li>
+            <a href="tel:949-342-6820"><i class="fa-solid fa-mobile-screen-button"></i></a>
+          </li>
+          <li>
+            <a href="tel:949-342-6820">(949) 342-6820</a>‬
+          </li>
+        </ul> 
+        <ul class="email">
+          <li>
+            <a href="mailto:marisakbrantley@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          </li>
+          <li>
+            <a href="mailto:marisakbrantley@gmail.com">marisakbrantley@gmail.com</a>
+          </li>
+        </ul>
       </div>
+    </div>  
 
-      <div class="contact-form">
-        <div style="max-width:500px;padding:30px">
-          <div id="fcf-form">
-              <form class="fcf-form-class" id="freeversion" method="post" action="fcf-assets/fcf.process.php">
-  
-                  <div class="field">
-                      <label for="Name" class="label has-text-weight-normal">Your name</label>
-                      <div class="control">
-                          <input type="text" name="Name" id="Name" class="input is-full-width" maxlength="100"
-                              data-validate-field="Name">
-                      </div>
-                  </div>
-                  <div class="field">
-                      <label for="Email" class="label has-text-weight-normal">Your email address</label>
-                      <div class="control">
-                          <input type="email" name="Email" id="Email" class="input is-full-width" maxlength="100"
-                              data-validate-field="Email">
-                      </div>
-                  </div>
-                  <div class="field">
-                      <label for="Message" class="label has-text-weight-normal">Your message</label>
-                      <div class="control">
-                          <textarea name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
-                          data-validate-field="Message"></textarea>
-                      </div>
-                  </div>
-                  <div id="fcf-status" class="fcf-status"></div>
-                  <div class="field">
-                      <div class="buttons">
-                          <button id="fcf-button" type="submit" class="button is-link is-medium">Send Message</button>
-                      </div>
-                  </div>
-              </form>
-          </div>
-          <div id="fcf-thank-you" style="display:none">
-              <strong>Thank you!</strong>
-              <p>Thank you for contacting me. I will get back in touch with you soon.</p>
-          </div>
-        </div>
-       
+    <div class="social-media">
+      <div class="content-wrapper">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.linkedin.com/in/marisabrantley" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a> 
+          </li>
+          <li>
+            <a href="https://twitter.com/marisabrantley" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a> 
+          </li>
+          <li>
+            <a href="https://github.com/marisabrantley" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>  
+          </li>
+          <li>
+            <a href="https://www.instagram.com/marisab_oc" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+        </ul> 
       </div>
-
-      <div class="social-media">
-        <div class="content-wrapper">
-          <ul class="social-icons">
-            <li>
-              <a href="https://www.linkedin.com/in/marisabrantley" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-              </a> 
-            </li>
-            <li>
-              <a href="https://twitter.com/marisabrantley" target="_blank">
-                <i class="fa-brands fa-twitter"></i>
-              </a> 
-            </li>
-            <li>
-              <a href="https://github.com/marisabrantley" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>  
-            </li>
-            <li>
-              <a href="https://www.instagram.com/marisab_oc" target="_blank">
-                <i class="fa-brands fa-square-instagram"></i>
-              </a>
-            </li>    
-          </ul> 
-        </div>
-      </div>
-
     </div>
+
+    <div class="contact-form">
+      <div style="max-width:500px;padding:60px 0">
+        <div id="fcf-form">
+            <form class="fcf-form-class" id="freeversion" method="post" action="fcf-assets/fcf.process.php">
+
+                <div class="field">
+                    <label for="Name" class="label has-text-weight-normal">Your Name</label>
+                    <div class="control">
+                        <input type="text" name="Name" id="Name" class="input is-full-width" maxlength="100"
+                            data-validate-field="Name">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="Email" class="label has-text-weight-normal">Your Email Address</label>
+                    <div class="control">
+                        <input type="email" name="Email" id="Email" class="input is-full-width" maxlength="100"
+                            data-validate-field="Email">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="Message" class="label has-text-weight-normal">Your Message</label>
+                    <div class="control">
+                        <textarea name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
+                        data-validate-field="Message"></textarea>
+                    </div>
+                </div>
+                <div id="fcf-status" class="fcf-status"></div>
+                <div class="field">
+                    <div class="buttons">
+                        <button id="fcf-button" type="submit" class="button is-link is-medium">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="fcf-thank-you" style="display:none">
+            <strong>Thank you!</strong>
+            <p>Thank you for contacting me. I will get back in touch with you soon.</p>
+        </div>
+      </div>
+     
+    </div>
+
   </div>
 
   <footer>

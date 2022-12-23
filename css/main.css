@@ -13,7 +13,7 @@
 
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
@@ -92,8 +92,9 @@ textarea {
 html {
   font-size: 16px;
 }
+
 body {
-  font-size: 1em;
+  font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   background-color: white;
 }
@@ -106,15 +107,16 @@ ol {
 }
 
 a {
+  color: #ffffff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 300;
   font-family: 'Cardo', serif;
   text-transform: uppercase;
-  width: 100%;
 }
 
 h2 {
@@ -143,26 +145,42 @@ p {
   width: 100%;
 }
 
-a:hover {
-  background-color: rgb(254, 153, 170)
+header #contact-link,
+button {
+  text-align: center;
+  font-size: .9rem;
+  color: #01285d;
+  border: none;
+  background-color: pink;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 8px 18px;
 }
-
 
 /* STRUCTURAL STYLES */
 
 header,
 #about,
-#project,
-#contact {
+#projects,
+#skills {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: row wrap;
 }
 
+#about {
+  padding: 30px 0 60px;
+}
+
+#skills {
+  padding: 0 0 60px;
+}
+
 .content-wrapper {
-  width: 86%;
-  margin: 10px auto;
+  width: 85%;
+  margin: 0 auto;
 }
 
 img {
@@ -174,12 +192,13 @@ figure {
   width: 100%;
 }
 
-header {
-  padding: 10px 0 100px 0;
-}
-
 footer {
   padding: 16px;
+}
+
+h2 {
+  padding: 60px 0;
+  margin: 0;
 }
 
 
@@ -194,6 +213,9 @@ footer {
   text-align: center;  
 }
 
+header .content-wrapper {
+  padding: 20px 0 100px;
+}
 
 /* Navigation */
 
@@ -201,37 +223,61 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   margin: 0;
-  padding: 0;
+  padding-bottom: 85px;
 }
 
 header nav ul li {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
 }
 
-header .name-title h1 {
+
+header .typewriter {
+  overflow: hidden;
+  border-right: 2px solid transparent;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .1rem; 
+  margin-bottom: 10px;
+  animation: 
+    typing 2s steps(30, end), 
+    blinking-cursor .5s step-end 7;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinking-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+
+header .name-title {
+  padding-bottom: 20px;
+}
+
+/*header .name-title h1 {
   letter-spacing: 1px;
   padding: 70px 0 0;
   margin-bottom: 10px;
 }
+*/
 
 header .name-title h4 {
   font-weight: 300;
   margin-top: 0;
   padding-bottom: 15px;
-}
-
-header #contact-link {
-  text-align: center;
-  font-size: .9rem;
-  color: #01285d;
-  background-color: pink;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 15px;
-  padding: 8px 18px;
-  transition-duration: 0.4s;
 }
 
 /* Footer Styles */
@@ -254,10 +300,6 @@ footer span {
   flex-flow: row wrap;
 }
 
-.about-wrapper figure {
-  padding-top: 40px;
-}
-
 #about img {
   padding-bottom: 20px;
 }
@@ -274,23 +316,25 @@ footer span {
 
 /* Projects Section */
 
-.projects {
+#projects {
   display: flex;
   flex-flow: row wrap;
 }
 
-.projects .content-wrapper {
+#projects .content-wrapper {
   border-top: .8px solid #01285d;
   border-bottom: .8px solid #01285d;
 }
 
-.projects .project-piece {
+.project-piece {
   display: flex;
-  flex-flow: row wrap;
-  padding-bottom: 55px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 82px;
 }
 
-.projects img {
+#projects img {
   height: auto;
   object-fit: cover;
   filter: drop-shadow(0 0 0.75rem	#d3d3d3);
@@ -300,22 +344,22 @@ footer span {
   text-align: center;
 }
 
-.projects .project-description {
+#projects .project-description {
   padding-bottom: 16px;
 }
 
-.projects .project-piece p {
+#projects .project-piece p {
   margin: 0;
 }
 
-.projects .project-piece span {
+#projects .project-piece span {
   font-weight: bold;
 }
 
 .project-link {
   text-align: center;
   color: #01285d;
-  background-color: pink;
+  background-color: #fe99aa;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -328,14 +372,91 @@ footer span {
 
 /* Skills Section */
 
-.skills .content-wrapper {
-  border-bottom: .8px solid #01285d;
+#skills {
+  text-align: center;
+
+}
+#skills h2 {
+  padding-bottom: 0;
+}
+
+#skills h4 {
+  padding: 20px 0;
+}
+
+.skills-wrapper p,
+.tools-wrapper p {
+  color: white;
+  background-color: #01285d;
+  padding: 15px 0;
+  margin: 20px 0;
+}
+
+.skill,
+.tool {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.skill:hover,
+.tool:hover {
+  transform: scale(1.05);
+}
+
+.tool {
+  width: 100%;
 }
 
 
 /* Contact Section */
 
+#contact {
+  background-color: #e2f8f7;
+  text-align: center;
+}
 
+.contact-info .content-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+#contact h4 {
+  margin-top: 0;
+}
+
+#contact .contact-info ul {
+  padding: 15px 0 
+}
+
+#contact .contact-info a {
+  color: #222;
+  font-size: 1.15rem;
+}
+
+#contact .social-media {
+  padding-top: 60px;
+}
+
+#contact .social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#contact .social-icons li i {
+  font-size: 2.5rem;
+  color: #01285d;
+}
+
+#contact .contact-form {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form .control {
+  padding-bottom: 25px;
+}
 
 
 /* ==========================================================================
@@ -426,9 +547,51 @@ footer span {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 768px) {
   /* Style adjustments for viewports that meet the condition */
+
+  header #contact-link:hover,
+  button:hover {
+  background-color: #fe99aa;
+  transform: scale(1.1);
 }
+
+nav ul li a {
+  position: relative;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+.project-link {
+transition-duration: 0.4s;
+}
+
+.project-link:hover {
+  background-color: rgb(254, 153, 170);
+  transform: scale(1.1);
+}
+
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
