@@ -136,11 +136,12 @@ h3 {
 h4 {
   font-size: 1.25rem;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   width: 100%;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 300;
   width: 100%;
 }
@@ -222,8 +223,9 @@ header .content-wrapper {
 header nav ul {
   display: flex;
   justify-content: space-around;
+  font-size: 1.1rem;
   margin: 0;
-  padding-bottom: 85px;
+  padding-bottom: 2px;
 }
 
 header nav ul li {
@@ -231,16 +233,16 @@ header nav ul li {
 }
 
 
-header .typewriter {
+/*header .typewriter {
   overflow: hidden;
   border-right: 2px solid transparent;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .1rem; 
+  letter-spacing: .09rem; 
   margin-bottom: 10px;
   animation: 
-    typing 2s steps(30, end), 
-    blinking-cursor .5s step-end 7;
+    typing 4.2s steps(38, end), 
+    blinking-cursor .5s step-end 12;
 }
 
 @keyframes typing {
@@ -261,18 +263,18 @@ header .typewriter {
     border-color: white;
   }
 }
+*/
 
 
 header .name-title {
   padding-bottom: 20px;
 }
 
-/*header .name-title h1 {
-  letter-spacing: 1px;
+header .name-title h1 {
+  letter-spacing: .1rem;
   padding: 70px 0 0;
   margin-bottom: 10px;
 }
-*/
 
 header .name-title h4 {
   font-weight: 300;
@@ -310,8 +312,8 @@ footer span {
   text-align: center;
 }
 
-.about-me span {
-  font-weight: 500;
+#about span {
+  font-weight: bold;
 }
 
 /* Projects Section */
@@ -349,7 +351,7 @@ footer span {
 }
 
 #projects .project-piece p {
-  margin: 0;
+  margin: 2px;
 }
 
 #projects .project-piece span {
@@ -359,7 +361,7 @@ footer span {
 .project-link {
   text-align: center;
   color: #01285d;
-  background-color: #fe99aa;
+  background-color: pink;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -386,6 +388,7 @@ footer span {
 
 .skills-wrapper p,
 .tools-wrapper p {
+  font-size: 1.05rem;
   color: white;
   background-color: #01285d;
   padding: 15px 0;
@@ -398,15 +401,9 @@ footer span {
   font-weight: 400;
 }
 
-.skill:hover,
-.tool:hover {
-  transform: scale(1.05);
-}
-
 .tool {
   width: 100%;
 }
-
 
 /* Contact Section */
 
@@ -432,6 +429,10 @@ footer span {
 #contact .contact-info a {
   color: #222;
   font-size: 1.15rem;
+}
+
+#contact .contact-info i {
+  color: #01285d;
 }
 
 #contact .social-media {
@@ -592,6 +593,11 @@ transition-duration: 0.4s;
 }
 
 
+.skill:hover,
+.tool:hover {
+  transform: scale(1.05);
+}
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
@@ -674,4 +680,3 @@ transition-duration: 0.4s;
     page-break-after: avoid;
   }
 }
-
