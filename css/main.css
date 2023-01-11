@@ -91,6 +91,7 @@ textarea {
 
 html {
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 body {
@@ -120,14 +121,16 @@ h1 {
 }
 
 h2 {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   font-family: 'Cardo', serif;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
   width: 100%;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-family: 'Cardo', serif;
   width: 100%;
 }
@@ -137,6 +140,7 @@ h4 {
   font-size: 1.25rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  text-align: center;
   width: 100%;
 }
 
@@ -146,8 +150,7 @@ p {
   width: 100%;
 }
 
-header #contact-link,
-button {
+header #contact-link {
   text-align: center;
   font-size: .9rem;
   color: #01285d;
@@ -160,12 +163,19 @@ button {
   padding: 8px 18px;
 }
 
+footer {
+  color: #222;
+  background-color: white;
+  padding-bottom: 55px;
+  text-align: center;
+}
+
 /* STRUCTURAL STYLES */
 
-header,
-#about,
 #projects,
-#skills {
+#skills,
+#contact, 
+footer {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -175,11 +185,13 @@ header,
   padding: 30px 0 60px;
 }
 
-#skills {
+#skills,
+#contact {
   padding: 0 0 60px;
 }
 
-.content-wrapper {
+#about .content-wrapper,
+#projects .content-wrapper {
   width: 85%;
   margin: 0 auto;
 }
@@ -193,9 +205,6 @@ figure {
   width: 100%;
 }
 
-footer {
-  padding: 16px;
-}
 
 h2 {
   padding: 60px 0;
@@ -207,85 +216,87 @@ h2 {
  
 /* Header Styles */
 
-header, 
-footer {
+header {
   background-color: #01285d;
   color: white;
-  text-align: center;  
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 header .content-wrapper {
-  padding: 20px 0 100px;
+  padding: 100px 0 100px;
 }
+
 
 /* Navigation */
 
-header nav ul {
+.nav-container {
   display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  background-color: #01285d;
+  position: fixed;
+  bottom: 0;
+  height: 55px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.nav-item {
   justify-content: space-around;
-  font-size: 1.1rem;
-  margin: 0;
-  padding-bottom: 2px;
+  align-items: center;
+  flex-grow: 1;
 }
 
-header nav ul li {
-  font-family: 'Montserrat', sans-serif;
-}
-
-
-/*header .typewriter {
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
   overflow: hidden;
-  border-right: 2px solid transparent;
   white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .09rem; 
-  margin-bottom: 10px;
-  animation: 
-    typing 4.2s steps(38, end), 
-    blinking-cursor .5s step-end 12;
+  text-decoration: none;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+.nav-icon {
+  font-size: 1.1rem;
 }
-
-@keyframes blinking-cursor {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: white;
-  }
-}
-*/
 
 
 header .name-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
   padding-bottom: 20px;
 }
 
 header .name-title h1 {
   letter-spacing: .1rem;
-  padding: 70px 0 0;
   margin-bottom: 10px;
 }
 
 header .name-title h4 {
+  font-size: 1.2rem;
   font-weight: 300;
   margin-top: 0;
-  padding-bottom: 15px;
+  padding: 0 70px;
 }
 
 /* Footer Styles */
 
 footer {
+  background-color: #01285d;
+  color: white;
   line-height: 1.8rem;
+}
+
+footer p {
+  font-size: 0.95rem;
 }
 
 footer span {
@@ -294,15 +305,25 @@ footer span {
 
 /* ------------------------ Mobile Styles - Homepage --------------------- */
 
+
+
 /* About Section */
 
-#about .content-wrapper {
+#about {
+  width: 100%;
+}
+
+#about .about-wrapper {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
 }
 
-#about img {
+#about .about-icons {
+  display: none;
+}
+
+#profile-image {
   padding-bottom: 20px;
 }
 
@@ -321,9 +342,6 @@ footer span {
 #projects {
   display: flex;
   flex-flow: row wrap;
-}
-
-#projects .content-wrapper {
   border-top: .8px solid #01285d;
   border-bottom: .8px solid #01285d;
 }
@@ -333,17 +351,13 @@ footer span {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 82px;
+  padding-bottom: 80px;
 }
 
 #projects img {
   height: auto;
   object-fit: cover;
-  filter: drop-shadow(0 0 0.75rem	#d3d3d3);
-}
-
-.project-piece h4 {
-  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 #projects .project-description {
@@ -361,13 +375,14 @@ footer span {
 .project-link {
   text-align: center;
   color: #01285d;
-  background-color: pink;
+  background-color: #ffc0cb;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   font-size: 1rem;
-  padding: 14px 40px;
+  padding: 10px 36px;
   margin-top: 30px;
 }
 
@@ -376,22 +391,23 @@ footer span {
 
 #skills {
   text-align: center;
-
 }
+
 #skills h2 {
   padding-bottom: 0;
 }
 
 #skills h4 {
+  font-size: 1.3rem;
   padding: 20px 0;
 }
 
 .skills-wrapper p,
 .tools-wrapper p {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: white;
   background-color: #01285d;
-  padding: 15px 0;
+  padding: 17px 5px;
   margin: 20px 0;
 }
 
@@ -405,6 +421,13 @@ footer span {
   width: 100%;
 }
 
+.skill:hover,
+.tool:hover {
+  transform: scale(1.05);
+}
+
+
+
 /* Contact Section */
 
 #contact {
@@ -412,10 +435,11 @@ footer span {
   text-align: center;
 }
 
-.contact-info .content-wrapper {
+#contact .content-wrapper {
   display: flex;
-  justify-content: center;
   flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 #contact h4 {
@@ -423,7 +447,7 @@ footer span {
 }
 
 #contact .contact-info ul {
-  padding: 15px 0 
+  padding: 10px 0;
 }
 
 #contact .contact-info a {
@@ -436,13 +460,20 @@ footer span {
 }
 
 #contact .social-media {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 #contact .social-icons {
   display: flex;
-  align-items: center;
   justify-content: space-around;
+}
+
+.social-icons li {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #contact .social-icons li i {
@@ -450,14 +481,6 @@ footer span {
   color: #01285d;
 }
 
-#contact .contact-form {
-  display: flex;
-  justify-content: center;
-}
-
-.contact-form .control {
-  padding-bottom: 25px;
-}
 
 
 /* ==========================================================================
@@ -551,53 +574,295 @@ footer span {
 @media only screen and (min-width: 768px) {
   /* Style adjustments for viewports that meet the condition */
 
-  header #contact-link:hover,
-  button:hover {
-  background-color: #fe99aa;
-  transform: scale(1.1);
+  .content-wrapper {
+    max-width: 640px;
+  }
+
+  header .content-wrapper {
+    padding: 130px 0 130px 0;
+  }
+
+  #about figure {
+    width: 60%;
+  }
+
+  #about .about-icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  
+  #about .me-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  #about li {
+    padding: 15px;
+  }
+
+  #about .me-icons li i {
+    font-size: 2.2rem;
+    color: pink;
+  }
+
+  #about .me-icons li span {
+    font-size: 1rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding-top: 13px;
+  }
+
+ 
+
+  .projects-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+
+  }
+
+  .project-piece {
+    width: 30%;
+    align-items: center;
+  }
+
+  .skills-wrapper,
+  .tools-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  .skill,
+  .tool {
+    width: 45%;
+  }
+
 }
 
-nav ul li a {
-  position: relative;
-  color: white;
+
+
+@media only screen and (min-width: 1025px) {
+
+  .content-wrapper {
+    max-width: 1450px;
+  }
+
+  #projects,
+  #skills,
+  #contact {
+    padding: 70px 0;
+  }
+
+  #about .content-wrapper,
+  #projects .content-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  header .content-wrapper {
+    padding: 330px 0 350px 0;
+  }
+
+  /*header nav ul {
+    font-size: 1.1rem;
+    margin: 0;
+    padding-bottom: 2px;
+  }
+
+  header nav ul li {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  nav ul li a {
+    position: relative;
+    color: white;
+  }
+
+  nav ul li a:hover {
+    color: white;
+  }
+
+  nav ul li a::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  nav ul li a:hover::before {
+    transform: scaleX(1);
+  }
+  */
+
+
+  .nav-list {
+    position: absolute;
+    top: 0;
+    width: 65%;
+    padding-top: 10px;
+  }
+
+  .nav-item .home,
+  .nav-item .contact-item {
+    display: none;
+  }
+
+  .nav-item .nav-icon {
+    display: none;
+  }
+
+  .nav-item span {
+    font-size: 1.05rem;
+    transition-duration: 0.4s;
+  }
+
+  .nav-item span:hover {
+    color:pink;
+    transform: scale(1.2);
+  }
+
+  header .name-title h1 {
+    font-size: 2.6rem;
+    letter-spacing: .15rem;
+    font-weight: 500;
+  }
+  
+  header .name-title h4 {
+    padding-bottom: 50px;
+  }
+  
+  header #contact-link {
+    border-radius: 15px;
+    padding: 10px 36px;
+    font-size: 1rem;
+    transition-duration: 0.4s;
+  }
+
+  header #contact-link:hover {
+    background-color: #fe99aa;
+    transform: scale(1.1);
+  }
+
+
+
+
+
+  #about {
+    padding: 130px 0;
+  }
+
+  #about figure {
+    width: 42%;
+  }
+
+  #about #profile-image {
+    padding: 0;
+  }
+
+  #about .about-me {
+    width: 45%;
+    padding-left: 100px;
+  }
+
+  #about .about-me h3 {
+    font-size: 1.9rem;
+    padding: 70px 0 25px;
+    margin: 0;
+  }
+
+  #about .about-me h4 {
+    font-size: 1.3rem;
+    text-align: left;
+    padding-bottom: 15px;
+  }
+
+  #about .about-me p {
+    margin: 25px 0;
+  }
+
+  #about .about-icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+  }
+  
+  #about .me-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #about li {
+    padding: 15px;
+  }
+
+  #about .me-icons li i {
+    font-size: 2.2rem;
+    color: #ffc0cb;
+  }
+
+  #about .me-icons li span {
+    font-size: 1rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding-top: 13px;
+  }
+
+
+  #projects {
+    background-color: ;
+  }
+
+  #projects .projects-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #projects .projects-piece {
+    align-items: center;
+    width: 40%;
+  }
+
+
+  .project-link {
+    transition-duration: 0.4s;
+  }
+  
+
+
+
+  .project-link:hover {
+    background-color: rgb(254, 153, 170);
+    transform: scale(1.1);
+  }
+
+  
+  .skill:hover,
+  .tool:hover {
+    transform: scale(1.05);
+  }
+
+  
 }
-
-nav ul li a:hover {
-  color: white;
-}
-
-nav ul li a::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-nav ul li a:hover::before {
-  transform: scaleX(1);
-}
-
-.project-link {
-transition-duration: 0.4s;
-}
-
-.project-link:hover {
-  background-color: rgb(254, 153, 170);
-  transform: scale(1.1);
-}
-
-
-.skill:hover,
-.tool:hover {
-  transform: scale(1.05);
-}
-
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
