@@ -421,10 +421,7 @@ footer span {
   width: 100%;
 }
 
-.skill:hover,
-.tool:hover {
-  transform: scale(1.05);
-}
+
 
 
 
@@ -655,18 +652,19 @@ footer span {
     max-width: 1450px;
   }
 
-  #projects,
-  #skills,
-  #contact {
-    padding: 70px 0;
-  }
-
-  #about .content-wrapper,
+  
+  
   #projects .content-wrapper {
-    width: 100%;
+    width: 85%;
     margin: 0 auto;
   }
 
+  #projects h2,
+  #contact h2 {
+    font-size: 2.3rem;
+    padding: 130px 0;
+    font-weight: 500;
+  }
 
   header .content-wrapper {
     padding: 330px 0 350px 0;
@@ -737,19 +735,20 @@ footer span {
   }
 
   header .name-title h1 {
-    font-size: 2.6rem;
-    letter-spacing: .15rem;
+    font-size: 2.8rem;
+    letter-spacing: .2rem;
     font-weight: 500;
   }
   
   header .name-title h4 {
+    font-size: 1.4rem;
     padding-bottom: 50px;
   }
   
   header #contact-link {
     border-radius: 15px;
     padding: 10px 36px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition-duration: 0.4s;
   }
 
@@ -758,16 +757,26 @@ footer span {
     transform: scale(1.1);
   }
 
-
+  footer {
+   padding: 0; 
+  }
 
 
 
   #about {
     padding: 130px 0;
+    display: flex;
+    justify-content: center;
   }
 
+  #about .content-wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+
   #about figure {
-    width: 42%;
+    width: 43%;
   }
 
   #about #profile-image {
@@ -776,12 +785,12 @@ footer span {
 
   #about .about-me {
     width: 45%;
-    padding-left: 100px;
+    padding-left: 80px;
   }
 
   #about .about-me h3 {
-    font-size: 1.9rem;
-    padding: 70px 0 25px;
+    font-size: 2.1rem;
+    padding: 50px 0 25px;
     margin: 0;
   }
 
@@ -810,7 +819,7 @@ footer span {
   }
   
   #about li {
-    padding: 15px;
+    padding: 35px;
   }
 
   #about .me-icons li i {
@@ -829,39 +838,108 @@ footer span {
 
 
   #projects {
-    background-color: ;
+    border: 0;
+    background-color: #f5f5f5;
   }
 
-  #projects .projects-wrapper {
+  /*#projects:before { 
+    content: "";
+    width: 70%;
+    border-top: 1.5px solid #01285d;
+  }
+
+  #projects:after { 
+    content: "";
+    width: 70%;
+    border-bottom: 1.5px solid #01285d;
+  }
+*/
+ 
+
+  #projects .project-piece {
+    align-items: center;
+    width: 30%;
     display: flex;
     justify-content: space-around;
-  }
-
-  #projects .projects-piece {
     align-items: center;
-    width: 40%;
+    padding-bottom: 150px;
   }
 
 
-  .project-link {
+  #projects .project-piece h4 {
+    font-size: 1.4rem;
+    padding-top: 50px;
+  }
+
+  #projects .project-piece .project-link {
     transition-duration: 0.4s;
+    margin-top: 55px; 
   }
   
-
-
-
   .project-link:hover {
-    background-color: rgb(254, 153, 170);
+    background-color: #fe99aa;
     transform: scale(1.1);
   }
 
+
+
+  #skills .content-wrapper {
+    width: 65%;
+    margin: 0 auto;
+  }
   
+  .skills-wrapper p,
+  .tools-wrapper p {
+    font-size: 1rem;
+    letter-spacing: .04rem;
+    font-weight: 300;
+    padding: 20px 5px;
+    margin: 10px 0;
+    width: 30%;
+}
+
+  #skills h2 {
+    font-size: 2.3rem;
+    font-weight: 500;
+    padding-top: 130px;
+  }
+
+  #skills h4 {
+    font-size: 1.45rem;
+  }
+
   .skill:hover,
   .tool:hover {
     transform: scale(1.05);
   }
 
-  
+  .tools-wrapper {
+    padding-bottom: 70px;
+  }
+
+  #contact {
+    width: 50%;
+  }
+
+  #contact .content-wrapper {
+    
+    width: %;
+  }
+
+  #contact h2 {
+    padding-bottom: 0;
+  }
+
+  #contact h4 {
+    font-size: 1.6rem;
+    padding-top: 60px;
+  }
+
+  #contact .social-media {
+    display: flex;
+  }
+
+
 }
 
 @media print,
