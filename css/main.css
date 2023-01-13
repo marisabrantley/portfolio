@@ -478,6 +478,10 @@ footer span {
   color: #01285d;
 }
 
+.contact-form {
+  display: none;
+}
+
 
 
 /* ==========================================================================
@@ -642,6 +646,8 @@ footer span {
     width: 45%;
   }
 
+  
+
 }
 
 
@@ -758,7 +764,12 @@ footer span {
   }
 
   footer {
-   padding: 0; 
+   padding: 30px;
+  }
+
+  footer p {
+    font-size: 1.1rem;
+    line-height: 1.8em;
   }
 
 
@@ -896,7 +907,7 @@ footer span {
     padding: 20px 5px;
     margin: 10px 0;
     width: 30%;
-}
+  }
 
   #skills h2 {
     font-size: 2.3rem;
@@ -917,28 +928,52 @@ footer span {
     padding-bottom: 70px;
   }
 
-  #contact {
-    width: 50%;
-  }
-
-  #contact .content-wrapper {
-    
-    width: %;
-  }
-
-  #contact h2 {
-    padding-bottom: 0;
-  }
-
-  #contact h4 {
-    font-size: 1.6rem;
-    padding-top: 60px;
-  }
-
-  #contact .social-media {
+  #contact  .content-wrapper {
+    width: 90%;
     display: flex;
   }
 
+  #contact h2 {
+    padding-bottom: 80px;
+  }
+
+  #contact h4 {
+    font-size: 1.7rem;
+    text-align: left;
+  }
+
+  #contact .contact-info a {
+    font-size: 1.4rem;
+  }
+
+  .contact-wrapper {
+    width: 50%;
+    text-align: left;
+  }
+
+  .contact-form {
+    display: block;
+    width: 35%;
+    padding-bottom: 70px;
+  }
+  
+  #contact #mc_embed_signup {
+    padding: 5px;
+  }
+
+
+  #contact input.button {
+    background-color: pink;
+    font-weight: bold;
+    border-radius: 15px;
+    margin: auto;
+    display: block;
+  }
+
+  #contact input.button:hover {
+    background-color: #fe99aa;
+    transform: scale(1.1);
+  }
 
 }
 
