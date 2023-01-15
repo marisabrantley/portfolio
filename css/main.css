@@ -440,6 +440,7 @@ footer span {
 }
 
 #contact h4 {
+  font-size: 1.35rem;
   margin-top: 0;
 }
 
@@ -449,7 +450,7 @@ footer span {
 
 #contact .contact-info a {
   color: #222;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
 #contact .contact-info i {
@@ -629,7 +630,7 @@ footer span {
   }
 
   .project-piece {
-    width: 30%;
+    width: 75%;
     align-items: center;
   }
 
@@ -641,13 +642,22 @@ footer span {
     width: 100%;
   }
 
+  .skills-wrapper p,
+  .tools-wrapper p {
+    font-weight: 300;
+    padding: 20px 5px;
+    margin: 10px 0;
+  }
+
   .skill,
   .tool {
     width: 45%;
   }
 
+  #contact .social-icons li {
+    width: 85px;
+  }
   
-
 }
 
 
@@ -658,7 +668,6 @@ footer span {
     max-width: 1450px;
   }
 
-  
   
   #projects .content-wrapper {
     width: 85%;
@@ -931,10 +940,17 @@ footer span {
   #contact  .content-wrapper {
     width: 90%;
     display: flex;
+    align-items: flex-start;
   }
 
   #contact h2 {
-    padding-bottom: 80px;
+    padding-bottom: px;
+  }
+
+
+  .contact-wrapper {
+    width: 50%;
+    text-align: left;
   }
 
   #contact h4 {
@@ -942,13 +958,29 @@ footer span {
     text-align: left;
   }
 
-  #contact .contact-info a {
-    font-size: 1.4rem;
+  #contact .contact-info {
+    padding-top: 30px;
   }
 
-  .contact-wrapper {
-    width: 50%;
-    text-align: left;
+  #contact .contact-info ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  #contact .contact-info li {
+    padding-right: 20px;  }
+
+  #contact .contact-info a {
+    font-size: 1.3rem;
+  }
+
+  #contact .social-icons li {
+    width: 100px;
+    height: 100px;
+  }
+
+  #contact .social-icons li i {
+    font-size: 3.2rem;
   }
 
   .contact-form {
@@ -964,6 +996,7 @@ footer span {
 
   #contact input.button {
     background-color: pink;
+    color: #01285d;
     font-weight: bold;
     border-radius: 15px;
     margin: auto;
@@ -974,6 +1007,7 @@ footer span {
     background-color: #fe99aa;
     transform: scale(1.1);
   }
+
 
 }
 
