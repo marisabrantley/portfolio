@@ -1057,6 +1057,8 @@ footer span {
     padding-bottom: 70px;
   }
 
+  
+
   #contact  .content-wrapper {
     width: 90%;
     display: flex;
@@ -1102,11 +1104,76 @@ footer span {
     font-size: 3.2rem;
   }
 
-  .contact-form {
+  /* Contact Form */
+
+  #contact .contact-form {
     display: block;
     width: 35%;
     padding-bottom: 70px;
+    text-align: left;
   }
+
+  #contact .form-container {
+    background-color: white;
+    padding: 20px;
+  }
+
+  #contact .fcf-body {
+    font-weight: 400;
+    text-align: left;
+  }
+
+  #contact .fcf-label {
+    font-size: 1.1rem;
+  }
+
+
+  #contact input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    resize: vertical;
+  }
+
+  #contact form .indicates-required {
+    padding-bottom: 15px;
+    text-align: right;
+    font-size: 0.7rem;
+  }
+
+  #contact form .indicates-required span,
+  #contact form label span {
+    color: red;
+  }
+
+  #contact button {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #01285d;
+    background-color: #ffc0cb;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 100%;
+    padding: 10px 55px;
+    transition-duration: 0.4s;
+  }
+
+  #contact button:hover {
+    background-color: #fe99aa;
+    transform: scale(1.05);
+  }
+
+
+
+
   
   /*
   #contact #mc_embed_signup {
@@ -1120,7 +1187,7 @@ footer span {
   #contact #mc_embed_signup div.mc-field-group input#mce-MMERGE6 {
     height:50px;
   }
-*/
+
   
 
   #contact input.button {
@@ -1136,6 +1203,7 @@ footer span {
     background-color: #fe99aa;
     transform: scale(1.1);
   }
+  */
 
   /* Dark Mode */
 
@@ -1176,6 +1244,27 @@ footer span {
     background-color: ;
   }
 */
+
+  .dark-mode #contact .form-container {
+    background-color: #0c1a35;  
+  }
+
+  .dark-mode #contact .fcf-label {
+    color: #d7cfc0;
+  }
+
+  .dark-mode  #contact form .indicates-required {
+    color: #d7cfc0;
+  }
+
+  .dark-mode input,
+  .dark-mode textarea {
+    background-color: #d7cfc0;
+  }
+
+  .dark-mode #contact button {
+    background-color: #17B794;
+
 
 
 

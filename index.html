@@ -285,7 +285,37 @@
 
       <div class="contact-form">
 
-        <style type="text/css">	#mc_embed_signup{background:white; clear:left; font: 22px}</style>
+        <div class="form-container">
+          <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+              <label for="First Name" class="fcf-label">First Name <span class="asterisk">*</span></label>
+              <div class="fcf-input-group">
+                <input autocomplete="false" type="text" id="First Name" name="First Name" class="fcf-form-control" required>
+              </div>
+              <label for="Last Name" class="fcf-label">Last Name</label>
+              <div class="fcf-input-group">
+                <input autocomplete="false" type="text" id="Last Name" name="Last Name" class="fcf-form-control" required>
+              </div>
+            <div class="fcf-form-group">
+              <label for="Email" class="fcf-label">Email Address <span class="asterisk">*</span></label>
+              <div class="fcf-input-group">
+                <input autocomplete="false" type="email" id="Email" name="Email" class="fcf-form-control" required>
+              </div>
+            <div class="fcf-form-group">
+              <label for="Message" class="fcf-label">Your message here... <span class="asterisk">*</span></label>
+              <div class="fcf-input-group">
+                <textarea autocomplete="false" id="Message" name="Message" class="fcf-form-control" rows="5" maxlength="3000" required></textarea>
+              </div>
+            </div>
+            <div class="fcf-form-group">
+              <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
+            </div>
+          </form>
+        </div>  
+
+      </div>  
+
+        <!--<style type="text/css">	#mc_embed_signup{background:white; clear:left; font: 22px}</style>
         <div id="mc_embed_signup">
           <form action="https://marisabrantley.us14.list-manage.com/subscribe/post?u=42930f2d0f2afbb7d088e8773&amp;id=094e11e9cb&amp;f_id=000b82e0f0" method="post" autocomplete="do-not-autofill" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
@@ -321,10 +351,8 @@
             </div>
             </div>
           </form>
+        </div> -->
         </div>
-      
-      </div>
-
     </div>  
   </div>
 
