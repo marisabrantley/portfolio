@@ -1,4 +1,4 @@
-const button = document.querySelector('.toggle-button');
+const button = document.getElementById('checkbox');
 
 const useDark = window.matchMedia('(prefers-color-scheme: dark)');
 let darkModeState = useDark.matches;
@@ -9,8 +9,8 @@ function toggleDarkMode(state) {
 
 toggleDarkMode(useDark.matches);
 
-useDark.addListener((evt) => toggleDarkMode(evt.matches));
+useDark.addEventListener('change', (e) => toggleDarkMode(e.matches));
 
-button.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark-mode');
+button.addEventListener('change', () => {
+  document.body.classList.toggle('dark-mode');
 });

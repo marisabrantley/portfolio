@@ -224,18 +224,7 @@ p {
   width: 100%;
 }
 
-header #contact-link {
-  text-align: center;
-  font-size: .9rem;
-  color: #01285d;
-  border: none;
-  background-color: pink;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 15px;
-  padding: 8px 18px;
-}
+
 
 footer {
   color: #222;
@@ -411,7 +400,18 @@ header .name-title h4 {
   padding: 0 70px;
 }
 
-
+header #contact-link {
+  text-align: center;
+  font-size: .9rem;
+  color: #01285d;
+  border: none;
+  background-color: pink;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 8px 18px;
+}
 
 /* Footer Styles */
 
@@ -636,7 +636,6 @@ footer span {
 
 .sr-only {
   border: 0;
-  clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -655,7 +654,6 @@ footer span {
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
-  clip: auto;
   height: auto;
   margin: 0;
   overflow: visible;
@@ -808,10 +806,6 @@ footer span {
     color: #d7cfc0;
 }
 
-  .dark-mode #about {
-    padding: 75px 0 60px;
-  }
-
   .dark-mode #about li {
     padding: 20px;
   }
@@ -833,6 +827,7 @@ footer span {
     margin: 5px 0;
   }
 
+}
 
 @media only screen and (min-width: 1025px) {
 
@@ -936,7 +931,6 @@ footer span {
     margin: 0 auto;
   }
   
-
   #about figure {
     width: 43%;
   }
@@ -1031,12 +1025,10 @@ footer span {
     font-size: 1.05rem;
     letter-spacing: .04rem;
     font-weight: 400;
-    padding: 25px px;
+    padding: 25px;
     margin: 10px 0;
     width: 30%;
   }
-
- 
 
   #skills h2 {
     font-size: 2.3rem;
@@ -1057,16 +1049,10 @@ footer span {
     padding-bottom: 70px;
   }
 
-  
-
   #contact  .content-wrapper {
     width: 90%;
     display: flex;
     align-items: flex-start;
-  }
-
-  #contact h2 {
-    padding-bottom: px;
   }
 
   .contact-wrapper {
@@ -1127,7 +1113,6 @@ footer span {
     font-size: 1.1rem;
   }
 
-
   #contact input[type=text], input[type=email], select, textarea {
     width: 100%;
     padding: 8px;
@@ -1172,88 +1157,28 @@ footer span {
   }
 
 
-
-
-  
-  /*
-  #contact #mc_embed_signup {
-    padding: 5px;
-  }
-
-  #contact #mc_embed_signup div.mc-field-group input {
-    border: 1px solid #01285d;
-  }
-
-  #contact #mc_embed_signup div.mc-field-group input#mce-MMERGE6 {
-    height:50px;
-  }
-
-  
-
-  #contact input.button {
-    background-color: pink;
-    color: #01285d;
-    font-weight: bold;
-    border-radius: 15px;
-    margin: auto;
-    display: block;
-  }
-
-  #contact input.button:hover {
-    background-color: #fe99aa;
-    transform: scale(1.1);
-  }
-  */
-
   /* Dark Mode */
 
   .dark-mode .nav-list {
     background-color: #2B4865;
   }
 
-  /*
-  .dark-mode #mc_embed_signup {
-    background-color: #0c1a35;
-    color: #d7cfc0;
-  }
-  
-  .dark-mode  div.mc-field-group input {
-    background-color: #d7cfc0;
+  .dark-mode .nav-item span:hover {
+    transform: scale(1.1);
   }
 
-  .dark-mode #mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
-    background-color: #d7cfc0;
+  .dark-mode header #contact-link:hover,
+  .dark-mode .project-link:hover {
+    background-color: #14a485;
   }
-
-  .dark-mode #mc_embed_signup  {
-    color: #d7cfc0;
-  }
-
-  .dark-mode  div.mc-field-group #mce-FNAME-HELPERTEXT,
-  .dark-mode  div.mc-field-group #mce-LNAME-HELPERTEXT,
-  .dark-mode  div.mc-field-group #mce-EMAIL-HELPERTEXT,
-  .dark-mode  div.mc-field-group #mce-MMERGE6-HELPERTEXT {
-    background-color: #0c1a35;
-  }
-
-  .dark-mode #contact input.button {
-    background-color: #17B794;
-  }
-
-  .dark-mode #contact input.button:hover {
-    background-color: ;
-  }
-*/
 
   .dark-mode #contact .form-container {
     background-color: #0c1a35;  
   }
 
-  .dark-mode #contact .fcf-label {
-    color: #d7cfc0;
-  }
-
-  .dark-mode  #contact form .indicates-required {
+  .dark-mode .nav-item span:hover,
+  .dark-mode #contact .fcf-label,
+  .dark-mode #contact form .indicates-required {
     color: #d7cfc0;
   }
 
@@ -1264,18 +1189,16 @@ footer span {
 
   .dark-mode #contact button {
     background-color: #17B794;
+  }
 
-
-
-
-}
+} 
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
-}
+  }
 
 /* ==========================================================================
    Print styles.

@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" >
   <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
   <meta name="color-scheme" content="light dark">
 
@@ -73,12 +73,12 @@
           </ul>      
         </nav>
 
-        <div class="toggle-button" aria-label="dark mode toggle">
-          <input type="checkbox" class="checkbox" id="checkbox" />
+        <div class="toggle-button">
+          <input type="checkbox" class="checkbox" id="checkbox">
           <label for="checkbox" class="label">
             <i class="fas fa-moon"></i>
             <i class="fas fa-sun"></i>
-            <div class="ball"></div>
+            <span class="ball"></span>
           </label>
         </div>
       
@@ -288,24 +288,25 @@
         <div class="form-container">
           <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
               <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-              <label for="First Name" class="fcf-label">First Name <span class="asterisk">*</span></label>
+              <label for="first-name" class="fcf-label">First Name <span class="asterisk">*</span></label>
               <div class="fcf-input-group">
-                <input autocomplete="false" type="text" id="First Name" name="First Name" class="fcf-form-control" required>
+                <input type="text" id="first-name" name="First Name" class="fcf-form-control" required>
               </div>
-              <label for="Last Name" class="fcf-label">Last Name</label>
+              <label for="last-name" class="fcf-label">Last Name</label>
               <div class="fcf-input-group">
-                <input autocomplete="false" type="text" id="Last Name" name="Last Name" class="fcf-form-control" required>
-              </div>
-            <div class="fcf-form-group">
-              <label for="Email" class="fcf-label">Email Address <span class="asterisk">*</span></label>
-              <div class="fcf-input-group">
-                <input autocomplete="false" type="email" id="Email" name="Email" class="fcf-form-control" required>
+                <input type="text" id="last-name" name="Last Name" class="fcf-form-control" required>
               </div>
             <div class="fcf-form-group">
-              <label for="Message" class="fcf-label">Your message here... <span class="asterisk">*</span></label>
+              <label for="email" class="fcf-label">Email Address <span class="asterisk">*</span></label>
               <div class="fcf-input-group">
-                <textarea autocomplete="false" id="Message" name="Message" class="fcf-form-control" rows="5" maxlength="3000" required></textarea>
+                <input type="email" id="email" name="Email" class="fcf-form-control" required>
               </div>
+            </div>
+            <div class="fcf-form-group">
+              <label for="message" id="messaege" class="fcf-label">Your message here... <span class="asterisk">*</span></label>
+              <div class="fcf-input-group">
+                <textarea id="message" name="Message" class="fcf-form-control" rows="5" maxlength="3000" required></textarea>
+            </div>
             </div>
             <div class="fcf-form-group">
               <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
@@ -315,63 +316,21 @@
 
       </div>  
 
-        <!--<style type="text/css">	#mc_embed_signup{background:white; clear:left; font: 22px}</style>
-        <div id="mc_embed_signup">
-          <form action="https://marisabrantley.us14.list-manage.com/subscribe/post?u=42930f2d0f2afbb7d088e8773&amp;id=094e11e9cb&amp;f_id=000b82e0f0" method="post" autocomplete="do-not-autofill" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-              <input autocomplete="false" name="hidden" type="text" class="hidden" autocomplete="off" >
-              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-              <div class="mc-field-group">
-	              <label for="mce-FNAME">First Name <span class="asterisk">*</span></label>
-	              <input type="text" value="" name="FNAME" class="" id="mce-FNAME" readonly="readonly" onfocus="this.removeAttribute('readonly');">
-	              <span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>
-              </div>
-              <div class="mc-field-group">
-	              <label for="mce-LNAME">Last Name </label>
-	              <input type="text" value="" name="LNAME" class="" id="mce-LNAME" autocomplete="off" readonly="readonly" onfocus="this.removeAttribute('readonly');">
-	              <span id="mce-LNAME-HELPERTEXT" class="helper_text"></span>
-              </div>
-              <div class="mc-field-group">
-	              <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
-	              <input readonly="readonly" onfocus="this.removeAttribute('readonly');" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="off"  required>
-	              <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-              </div>
-              <div class="mc-field-group">
-	              <label for="mce-MMERGE6">Your message here... <span class="asterisk">*</span></label>
-	              <input type="text" value="" name="MMERGE6" class="" id="mce-MMERGE6" style="vertical-align: top" autocomplete="off">
-	              <span id="mce-MMERGE6-HELPERTEXT" class="helper_text"></span>
-              </div>
-  	        <div id="mce-responses" class="clear foot">
-		          <div class="response" id="mce-error-response" style="display:none"></div>
-		          <div class="response" id="mce-success-response" style="display:none"></div>
-	          </div>    
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_42930f2d0f2afbb7d088e8773_094e11e9cb" tabindex="-1" value=""></div>
-            <div class="optionalParent">
-                  <input type="submit" value="SUBMIT" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
-            </div>
-          </form>
-        </div> -->
-        </div>
-    </div>  
+    </div> 
   </div>
-
+  
   <footer>
     <p>&copy;
       <script>document.write(new Date().getFullYear())</script> Marisa Brantley &verbar; All rights reserved.<br>Made with <span>♥</span> in California.
     </p>
   </footer>
 
-</body>  
-
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
   <script src="fcf-assets/js/fcf.form.js"></script>
-  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='MMERGE6';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-
-<!-- form.123formbuilder.com script ends here -->
+  
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
