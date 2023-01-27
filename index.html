@@ -74,11 +74,12 @@
         </nav>
 
         <div class="toggle-button">
-          <input type="checkbox" class="checkbox" id="checkbox">
-          <label for="checkbox" class="label">
+          <input type="checkbox" class="checkbox" id="checkbox" value="Toggle for Dark Mode">
+          <label for="checkbox" class="label" id="dark-mode-toggle-button">
             <i class="fas fa-moon"></i>
             <i class="fas fa-sun"></i>
             <span class="ball"></span>
+            <span class="visually-hidden">Toggle for Dark/Light Mode</span>
           </label>
         </div>
       
@@ -200,7 +201,7 @@
           <p class="skill">JavaScript</p>
           <p class="skill">Git and GitHub</p>
           <p class="skill">Responsive Web Development</p>
-          <p class="skill">SASS</p>
+          <p class="skill">SASS / SCSS</p>
           <p class="skill">HTML and CSS</p>
           <p class="skill">WordPress</p>
         </div>
@@ -229,7 +230,7 @@
           <div class="contact-info">
             <ul class="location">
               <li>
-                <a href="https://www.google.com/maps/place/Orange+County,+CA/@33.640814,-117.7803964,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+                <a href="https://www.google.com/maps/place/Orange+County,+CA/@33.640814,-117.7803964,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428" aria-label="Clickable icon to see location of Orange County on map" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
               </li>
               <li>
                 <a href="https://www.google.com/maps/place/Orange+County,+CA/@33.640814,-117.7803964,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428" target="_blank">Orange County, California</a>
@@ -237,7 +238,7 @@
             </ul>
             <ul class="telephone">
               <li>
-                <a href="tel:949-342-6820"><i class="fa-solid fa-mobile-screen-button"></i></a>
+                <a href="tel:949-342-6820" aria-label="Clickable icon of telephone to call phone number"><i class="fa-solid fa-mobile-screen-button"></i></a>
               </li>
               <li>
                 <a href="tel:949-342-6820">(949) 342-6820</a>‬
@@ -245,7 +246,7 @@
             </ul> 
             <ul class="email">
               <li>
-                <a href="mailto:marisakbrantley@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="mailto:marisakbrantley@gmail.com" aria-label="Clickable icon to send email"><i class="fa-solid fa-envelope"></i></a>
               </li>
               <li>
                 <a href="mailto:marisakbrantley@gmail.com">marisakbrantley@gmail.com</a>
@@ -257,22 +258,22 @@
             <div class="content-wrapper">
               <ul class="social-icons">
                 <li>
-                  <a href="https://www.linkedin.com/in/marisabrantley" target="_blank">
+                  <a href="https://www.linkedin.com/in/marisabrantley" aria-label="Clickable icon to view LinkedIn page" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                   </a> 
                 </li>
                 <li>
-                  <a href="https://twitter.com/marisabrantley" target="_blank">
+                  <a href="https://twitter.com/marisabrantley" aria-label="Clickable icon to view Twitter page" target="_blank">
                     <i class="fa-brands fa-twitter"></i>
                   </a> 
                 </li>
                 <li>
-                  <a href="https://github.com/marisabrantley" target="_blank">
+                  <a href="https://github.com/marisabrantley" aria-label="Clickable icon to view GitHub page" target="_blank">
                     <i class="fa-brands fa-github"></i>
                   </a>  
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/marisab_oc" target="_blank">
+                  <a href="https://www.instagram.com/marisab_oc" aria-label="Clickable icon to view Instagram page" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                   </a>
                 </li>
@@ -288,24 +289,24 @@
         <div class="form-container">
           <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
               <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-              <label for="first-name" class="fcf-label">First Name <span class="asterisk">*</span></label>
+              <label for="firstname" class="fcf-label">First Name <span class="asterisk">*</span></label>
               <div class="fcf-input-group">
-                <input type="text" id="first-name" name="First Name" class="fcf-form-control" required>
+                <input type="text" id="firstname" name="First Name" class="fcf-form-control" aria-labelledby="firstname" required>
               </div>
-              <label for="last-name" class="fcf-label">Last Name</label>
+              <label for="lastname" class="fcf-label">Last Name</label>
               <div class="fcf-input-group">
-                <input type="text" id="last-name" name="Last Name" class="fcf-form-control" required>
+                <input type="text" id="lastname" name="Last Name" class="fcf-form-control" aria-labelledby="lastname" required>
               </div>
             <div class="fcf-form-group">
               <label for="email" class="fcf-label">Email Address <span class="asterisk">*</span></label>
               <div class="fcf-input-group">
-                <input type="email" id="email" name="Email" class="fcf-form-control" required>
+                <input type="email" id="email" name="Email" class="fcf-form-control" aria-labelledby="email" required>
               </div>
             </div>
             <div class="fcf-form-group">
               <label for="message" id="messaege" class="fcf-label">Your message here... <span class="asterisk">*</span></label>
               <div class="fcf-input-group">
-                <textarea id="message" name="Message" class="fcf-form-control" rows="5" maxlength="3000" required></textarea>
+                <textarea id="message" name="Message" aria-labelledby="message" class="fcf-form-control" rows="5" maxlength="3000" required></textarea>
             </div>
             </div>
             <div class="fcf-form-group">

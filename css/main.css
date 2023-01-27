@@ -104,7 +104,7 @@ body {
 /* Dark Mode */
 
  .dark-mode ::selection {
-  background: #a4a096;
+    background: #a4a096;
 } 
   .dark-mode ::-moz-selection {
     color: #a4a096;
@@ -223,8 +223,6 @@ p {
   font-weight: 300;
   width: 100%;
 }
-
-
 
 footer {
   color: #222;
@@ -368,6 +366,20 @@ header .content-wrapper {
   width: 22px;
   transform: translateX(-2px);
   transition: transform 0.2s linear;
+}
+
+.label .visually-hidden {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); 
+  clip: rect(1px, 1px, 1px, 1px); 
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .checkbox:checked + .label .ball {
@@ -798,6 +810,7 @@ footer span {
   }
 
   /* Dark Mode */
+  
   .dark-mode #about .me-icons li i {
     color: #17B794;
   }
@@ -835,7 +848,15 @@ footer span {
     max-width: 1450px;
   }
 
+  #home {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
   header .content-wrapper {
+    width: 100%;
     padding: 25px 0 350px;
   }
 
@@ -854,6 +875,10 @@ footer span {
     font-size: 2.3rem;
     padding: 130px 0;
     font-weight: 500;
+  }
+
+  .nav-container {
+    width: 100%;
   }
 
   .nav-list {
@@ -935,10 +960,6 @@ footer span {
     width: 43%;
   }
 
-  #about #profile-image {
-    padding: 0;
-  }
-
   #about .about-me {
     width: 45%;
     padding-left: 80px;
@@ -946,7 +967,7 @@ footer span {
 
   #about .about-me h3 {
     font-size: 2.1rem;
-    padding: 50px 0 25px;
+    padding: 86px 0 25px;
     margin: 0;
   }
 
@@ -1017,17 +1038,25 @@ footer span {
   }
   
   #skills .content-wrapper {
-    width: 80%;
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .skills-wrapper,
+  .tools-wrapper {
+    width: 88%;
   }
 
   .skills-wrapper p,
   .tools-wrapper p {
-    font-size: 1.05rem;
-    letter-spacing: .04rem;
+    font-size: 1rem;
+    letter-spacing: .03rem;
     font-weight: 400;
-    padding: 25px;
+    padding: 20px;
     margin: 10px 0;
-    width: 30%;
+    width: 28%;
   }
 
   #skills h2 {
@@ -1132,7 +1161,7 @@ footer span {
 
   #contact form .indicates-required span,
   #contact form label span {
-    color: red;
+    color: #01285d;
   }
 
   #contact button {
@@ -1170,6 +1199,10 @@ footer span {
   .dark-mode header #contact-link:hover,
   .dark-mode .project-link:hover {
     background-color: #14a485;
+  }
+
+  .dark-mode #about li {
+    padding: 35px;
   }
 
   .dark-mode #contact .form-container {
