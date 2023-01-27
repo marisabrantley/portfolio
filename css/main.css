@@ -103,11 +103,11 @@ body {
 
 /* Dark Mode */
 
- .dark-mode ::selection {
-    background: #a4a096;
-} 
+  .dark-mode ::selection {
+    background: #0c1a35;
+  } 
   .dark-mode ::-moz-selection {
-    color: #a4a096;
+    color: #0c1a35;
   }
 
   .dark-mode body,
@@ -122,19 +122,21 @@ body {
   .dark-mode h2,
   .dark-mode h3,
   .dark-mode h4,
+  .dark-mode p,
   .dark-mode nav .nav-icon,
   .dark-mode nav span,
   .dark-mode .fa-moon,
-  .dark-mode .fa-sun {
+  .dark-mode .fa-sun,
+  .dark-mode .skills-wrapper p,
+  .dark-mode .tools-wrapper p,
+  .dark-mode #contact .contact-info a {
     color: #d7cfc0;
   }
  
-  .dark-mode footer span {
+  .dark-mode footer span,
+  .dark-mode #contact .contact-info i,
+  .dark-mode #contact .social-icons li i {
     color: #17B794;
-  }
-
-  .dark-mode p {
-    color: #a4a096;
   }
 
   .dark-mode img {
@@ -155,23 +157,12 @@ body {
     background-color: #2B4865;
   }
 
-  .dark-mode .skills-wrapper p,
-  .dark-mode .tools-wrapper p,
-  .dark-mode #contact .contact-info a {
-    color: #d7cfc0;
-  }
-
   .dark-mode .label {
     border: 1px solid #d7cfc0;
   }
   
   .dark-mode .label .ball {
     background-color: #d7cfc0;
-  }
-
-  .dark-mode #contact .contact-info i,
-  .dark-mode #contact .social-icons li i {
-    color: #17B794;
   }
 
 ul,
@@ -805,6 +796,10 @@ footer span {
     width: 45%;
   }
 
+  #contact .contact-info li i {
+    font-size: 1.4rem;
+  }
+
   #contact .social-icons li {
     width: 88px;
   }
@@ -1078,7 +1073,7 @@ footer span {
     padding-bottom: 70px;
   }
 
-  #contact  .content-wrapper {
+  #contact .content-wrapper {
     width: 90%;
     display: flex;
     align-items: flex-start;
@@ -1104,10 +1099,16 @@ footer span {
   }
 
   #contact .contact-info li {
-    padding-right: 20px;  }
+    padding-right: 20px;  
+  }
+
+  #contact .contact-info li i {
+    font-size: 1.5rem;
+  }
 
   #contact .contact-info a {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    font-weight: 400;
   }
 
   #contact .social-icons li {
@@ -1197,7 +1198,8 @@ footer span {
   }
 
   .dark-mode header #contact-link:hover,
-  .dark-mode .project-link:hover {
+  .dark-mode .project-link:hover,
+  .dark-mode #contact button {
     background-color: #14a485;
   }
 
@@ -1207,6 +1209,11 @@ footer span {
 
   .dark-mode #contact .form-container {
     background-color: #0c1a35;  
+  }
+
+  .dark-mode #contact form .indicates-required span,
+  .dark-mode #contact form label span {
+    color: #17B794;
   }
 
   .dark-mode .nav-item span:hover,
@@ -1220,9 +1227,6 @@ footer span {
     background-color: #d7cfc0;
   }
 
-  .dark-mode #contact button {
-    background-color: #17B794;
-  }
 
 } 
 
