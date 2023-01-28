@@ -87,7 +87,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* GENERAL STYLES */
+/* General Styles */
 
 html {
   font-size: 16px;
@@ -100,70 +100,6 @@ body {
   background-color: white;
   transition: background 0.2s linear;
 }
-
-/* Dark Mode */
-
-  .dark-mode ::selection {
-    background: #0c1a35;
-  } 
-  .dark-mode ::-moz-selection {
-    color: #0c1a35;
-  }
-
-  .dark-mode body,
-  .dark-mode .nav-list,
-  .dark-mode footer,
-  .dark-mode .toggle-button .label,
-  .dark-mode  {
-    background-color: #0c1a35;
-  }
-  
-  .dark-mode h1,
-  .dark-mode h2,
-  .dark-mode h3,
-  .dark-mode h4,
-  .dark-mode p,
-  .dark-mode nav .nav-icon,
-  .dark-mode nav span,
-  .dark-mode .fa-moon,
-  .dark-mode .fa-sun,
-  .dark-mode .skills-wrapper p,
-  .dark-mode .tools-wrapper p,
-  .dark-mode #contact .contact-info a {
-    color: #d7cfc0;
-  }
- 
-  .dark-mode footer span,
-  .dark-mode #contact .contact-info i,
-  .dark-mode #contact .social-icons li i {
-    color: #17B794;
-  }
-
-  .dark-mode img {
-    filter: brightness(0.80) contrast(1.1);
-  }
-
-
-  .dark-mode header #contact-link,
-  .dark-mode .project-link {
-    background-color: #17B794;
-  }
-
-  .dark-mode header,
-  .dark-mode #projects,
-  .dark-mode #contact,
-  .dark-mode .skills-wrapper p,
-  .dark-mode .tools-wrapper p {
-    background-color: #2B4865;
-  }
-
-  .dark-mode .label {
-    border: 1px solid #d7cfc0;
-  }
-  
-  .dark-mode .label .ball {
-    background-color: #d7cfc0;
-  }
 
 ul,
 ol {
@@ -192,6 +128,8 @@ h2 {
   text-transform: uppercase;
   font-weight: bold;
   width: 100%;
+  padding: 60px 0;
+  margin: 0;
 }
 
 h3 {
@@ -222,8 +160,6 @@ footer {
   text-align: center;
 }
 
-/* STRUCTURAL STYLES */
-
 #projects,
 #skills,
 #contact, 
@@ -231,6 +167,15 @@ footer {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+}
+
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+  width: 100%;
 }
 
 #about {
@@ -248,24 +193,6 @@ footer {
   margin: 0 auto;
 }
 
-img {
-  width: 100%;
-}
-
-figure {
-  margin: 0;
-  width: 100%;
-}
-
-
-h2 {
-  padding: 60px 0;
-  margin: 0;
-}
-
-
-/* ------------------------ Base Header-Footer Styles --------------------- */
- 
 /* Header Styles */
 
 header {
@@ -281,6 +208,13 @@ header .content-wrapper {
   width: 100%;
 }
 
+header .name-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  padding-top: 50px;
+}
 
 /* Navigation */
 
@@ -322,7 +256,7 @@ header .content-wrapper {
   font-size: 1.1rem;
 }
 
-/* Dark Mode Toggle */
+/* Dark Mode Toggle Button */
 
 .toggle-button {
   display: flex;
@@ -382,14 +316,88 @@ header .content-wrapper {
   color: white;
 }
 
+/* Footer Styles */
 
-header .name-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  padding-top: 50px;
+footer {
+  background-color: #01285d;
+  color: white;
+  line-height: 1.8rem;
 }
+
+footer p {
+  font-size: 0.95rem;
+}
+
+footer span {
+  color: pink;
+}
+
+/* General Dark Mode Styles */
+
+.dark-mode ::selection {
+  background: #0c1a35;
+} 
+.dark-mode ::-moz-selection {
+  color: #0c1a35;
+}
+
+.dark-mode body,
+.dark-mode .nav-list,
+.dark-mode footer,
+.dark-mode .toggle-button .label,
+.dark-mode  {
+  background-color: #0c1a35;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode p,
+.dark-mode nav .nav-icon,
+.dark-mode nav span,
+.dark-mode .fa-moon,
+.dark-mode .fa-sun,
+.dark-mode .skills-wrapper p,
+.dark-mode .tools-wrapper p,
+.dark-mode #contact .contact-info a {
+  color: #d7cfc0;
+}
+
+.dark-mode footer span,
+.dark-mode #contact .contact-info i,
+.dark-mode #contact .social-icons li i {
+  color: #17B794;
+}
+
+.dark-mode img {
+  filter: brightness(0.80) contrast(1.1);
+}
+
+.dark-mode header #contact-link,
+.dark-mode .project-link {
+  background-color: #17B794;
+}
+
+.dark-mode header,
+.dark-mode #projects,
+.dark-mode #contact,
+.dark-mode .skills-wrapper p,
+.dark-mode .tools-wrapper p {
+  background-color: #2B4865;
+}
+
+.dark-mode .label {
+  border: 1px solid #d7cfc0;
+}
+
+.dark-mode .label .ball {
+  background-color: #d7cfc0;
+}
+
+/* MOBILE STYLES */
+
+/* Header Styles */
 
 header .name-title h1 {
   letter-spacing: .1rem;
@@ -416,27 +424,7 @@ header #contact-link {
   padding: 8px 18px;
 }
 
-/* Footer Styles */
-
-footer {
-  background-color: #01285d;
-  color: white;
-  line-height: 1.8rem;
-}
-
-footer p {
-  font-size: 0.95rem;
-}
-
-footer span {
-  color: pink;
-}
-
-/* ------------------------ Mobile Styles - Homepage --------------------- */
-
-
-
-/* About Section */
+/* About Section Styles */
 
 #about {
   width: 100%;
@@ -453,12 +441,12 @@ footer span {
   display: none;
 }
 
-#profile-image {
+#about #profile-image {
   padding-bottom: 20px;
 }
 
-.about-me h3,
-.about-me h4 {
+#about .about-me h3,
+#about .about-me h4 {
   font-weight: 400;
   text-align: center;
 }
@@ -467,7 +455,7 @@ footer span {
   font-weight: bold;
 }
 
-/* Projects Section */
+/* Projects Section Styles */
 
 #projects {
   display: flex;
@@ -476,7 +464,7 @@ footer span {
   border-bottom: .8px solid #01285d;
 }
 
-.project-piece {
+#projects .project-piece {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -516,8 +504,7 @@ footer span {
   margin-top: 30px;
 }
 
-
-/* Skills Section */
+/* Skills Section Styles */
 
 #skills {
   text-align: center;
@@ -551,11 +538,7 @@ footer span {
   width: 100%;
 }
 
-
-
-
-
-/* Contact Section */
+/* Contact Section Styles */
 
 #contact {
   background-color: #e2f8f7;
@@ -612,7 +595,6 @@ footer span {
 .contact-form {
   display: none;
 }
-
 
 
 /* ==========================================================================
@@ -702,11 +684,15 @@ footer span {
    ========================================================================== */
 
 @media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports that meet the condition */
+  /* TABLET STYLES */
 
+  /* General Styles */
+  
   .content-wrapper {
     max-width: 720px;
   }
+
+  /* Header Styles */
 
   header .content-wrapper {
     padding: 32px 0 130px;
@@ -723,6 +709,8 @@ footer span {
   header .name-title h4 {
     font-size: 1.3rem;
   }
+
+  /* About Section Styles */
 
   #about figure {
     width: 60%;
@@ -760,6 +748,8 @@ footer span {
     padding-top: 13px;
   }
 
+  /* Project Section Styles */
+
   #projects {
     border: 0;
     background-color: #f5f5f5;
@@ -796,6 +786,8 @@ footer span {
     width: 45%;
   }
 
+  /* Contact Section Styles */
+
   #contact .contact-info li i {
     font-size: 1.4rem;
   }
@@ -804,7 +796,7 @@ footer span {
     width: 88px;
   }
 
-  /* Dark Mode */
+  /* Tablet Dark Mode */
   
   .dark-mode #about .me-icons li i {
     color: #17B794;
@@ -812,7 +804,7 @@ footer span {
 
   .dark-mode #about .me-icons li span {
     color: #d7cfc0;
-}
+  }
 
   .dark-mode #about li {
     padding: 20px;
@@ -821,7 +813,7 @@ footer span {
   .dark-mode #skills,
   .dark-mode #contact {
     padding: 0 0 60px;
-}
+  }
 
   .dark-mode #contact .contact-info .location {
     padding-top: 30px;
@@ -838,10 +830,22 @@ footer span {
 }
 
 @media only screen and (min-width: 1025px) {
+  /* DESKTOP STYLES */
+
+  /* General Styles */
 
   .content-wrapper {
     max-width: 1450px;
   }
+
+  #projects h2,
+  #contact h2 {
+    font-size: 2.3rem;
+    padding: 130px 0;
+    font-weight: 500;
+  }
+
+  /* Header Styles */
 
   #home {
     width: 100%;
@@ -855,22 +859,34 @@ footer span {
     padding: 25px 0 350px;
   }
 
-
   header .name-title {
     padding-top: 280px;
   }
 
-  #projects .content-wrapper {
-    width: 85%;
-    margin: 0 auto;
-  }
-
-  #projects h2,
-  #contact h2 {
-    font-size: 2.3rem;
-    padding: 130px 0;
+  header .name-title h1 {
+    font-size: 2.8rem;
+    letter-spacing: .2rem;
     font-weight: 500;
   }
+  
+  header .name-title h4 {
+    font-size: 1.4rem;
+    padding-bottom: 25px;
+  }
+  
+  header #contact-link {
+    border-radius: 15px;
+    padding: 10px 36px;
+    font-size: 1.2rem;
+    transition-duration: 0.4s;
+  }
+
+  header #contact-link:hover {
+    background-color: #fe99aa;
+    transform: scale(1.1);
+  }
+
+  /* Navigation */
 
   .nav-container {
     width: 100%;
@@ -902,32 +918,13 @@ footer span {
     transform: scale(1.2);
   }
 
+  /* Dark Mode Toggle Button */
+
   .toggle-button {
     padding: 0;
   }
 
-  header .name-title h1 {
-    font-size: 2.8rem;
-    letter-spacing: .2rem;
-    font-weight: 500;
-  }
-  
-  header .name-title h4 {
-    font-size: 1.4rem;
-    padding-bottom: 25px;
-  }
-  
-  header #contact-link {
-    border-radius: 15px;
-    padding: 10px 36px;
-    font-size: 1.2rem;
-    transition-duration: 0.4s;
-  }
-
-  header #contact-link:hover {
-    background-color: #fe99aa;
-    transform: scale(1.1);
-  }
+  /* Footer Styles */
 
   footer {
    padding: 30px;
@@ -938,7 +935,7 @@ footer span {
     line-height: 1.8em;
   }
 
-
+  /* About Section Styles */
 
   #about {
     padding: 130px 0;
@@ -1008,6 +1005,13 @@ footer span {
     padding-top: 13px;
   }
 
+  /* Projects Section Styles */
+
+  #projects .content-wrapper {
+    width: 85%;
+    margin: 0 auto;
+  }
+
   #projects .project-piece {
     align-items: center;
     width: 30%;
@@ -1072,6 +1076,8 @@ footer span {
   .tools-wrapper {
     padding-bottom: 70px;
   }
+
+  /* Contact Section Styles */
 
   #contact .content-wrapper {
     width: 90%;
@@ -1186,8 +1192,7 @@ footer span {
     transform: scale(1.05);
   }
 
-
-  /* Dark Mode */
+  /* Desktop Dark Mode */
 
   .dark-mode .nav-list {
     background-color: #2B4865;
@@ -1226,7 +1231,6 @@ footer span {
   .dark-mode textarea {
     background-color: #d7cfc0;
   }
-
 
 } 
 
