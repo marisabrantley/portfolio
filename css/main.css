@@ -188,7 +188,8 @@ figure {
 }
 
 #about .content-wrapper,
-#projects .content-wrapper {
+#projects .content-wrapper,
+#contact .content-wrapper {
   width: 85%;
   margin: 0 auto;
 }

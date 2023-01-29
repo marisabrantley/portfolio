@@ -287,7 +287,8 @@
       <div class="contact-form">
 
         <div class="form-container">
-          <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+          <form id="contact-form" class="fcf-form-class" method="post" action="contact-form-process.php">
+              <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
               <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
               <label for="firstname" class="fcf-label">First Name <span class="asterisk">*</span></label>
               <div class="fcf-input-group">
@@ -310,7 +311,7 @@
             </div>
             </div>
             <div class="fcf-form-group">
-              <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
+              <button type="submit" id="fcf-button" class="g-recaptcha" data-sitekey='6LfbKjIkAAAAAKP1cm4PwP3gbl4qffOtf_8CoYgK' data-callback='onRecaptchaSuccess'>Send</button>
             </div>
           </form>
         </div>  
@@ -326,9 +327,11 @@
     </p>
   </footer>
 
+  <script src="js/main.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
   <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
   <script src="fcf-assets/js/fcf.form.js"></script>
   
