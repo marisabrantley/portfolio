@@ -12,6 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="www.marisabrantley.com">
   <meta property="og:image" content="img/marisa-brantley-logo.png">
+  <meta name="color-scheme" content="light dark">
   
   <link rel="manifest" href="site.webmanifest">
   <link rel="marisa-brantley-logo" href="icon.png">
@@ -23,8 +24,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" >
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
-  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>  
 
 </head>
 
@@ -287,35 +288,41 @@
       <div class="contact-form">
 
         <div class="form-container">
-          <form id="contact-form" class="fcf-form-class" method="post" action="contact-form-process.php">
-              <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
-              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-              <label for="firstname" class="fcf-label">First Name <span class="asterisk">*</span></label>
-              <div class="fcf-input-group">
-                <input type="text" id="firstname" name="First Name" class="fcf-form-control" aria-labelledby="firstname" required>
-              </div>
-              <label for="lastname" class="fcf-label">Last Name</label>
-              <div class="fcf-input-group">
-                <input type="text" id="lastname" name="Last Name" class="fcf-form-control" aria-labelledby="lastname" required>
-              </div>
+        
+          <form action="contactform.php" method="POST" name="contactform" id="contact-form" class="fcf-form-class" role="form">
+            
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div class="fcf-form-group">
+              <label for="name" class="fcf-label">Name <span class="asterisk">*</span></label>
+              <input type="text" name="name" id="name" class="fcf-form-control" aria-labelledby="name" required>
+              
+            </div>
             <div class="fcf-form-group">
               <label for="email" class="fcf-label">Email Address <span class="asterisk">*</span></label>
-              <div class="fcf-input-group">
-                <input type="email" id="email" name="Email" class="fcf-form-control" aria-labelledby="email" required>
-              </div>
+              <input type="email" name="email" id="email" class="fcf-form-control" aria-labelledby="email" required >
+              
             </div>
             <div class="fcf-form-group">
-              <label for="message" id="messaege" class="fcf-label">Your message here... <span class="asterisk">*</span></label>
-              <div class="fcf-input-group">
-                <textarea id="message" name="Message" aria-labelledby="message" class="fcf-form-control" rows="5" maxlength="3000" required></textarea>
-            </div>
+              <label for="subject" class="fcf-label">Subject</label>
+              <input type="text" name="subject" id="subject" class="fcf-form-control" aria-labelledby="subject">
+              
             </div>
             <div class="fcf-form-group">
-              <button type="submit" id="fcf-button" class="g-recaptcha" data-sitekey='6LfbKjIkAAAAAKP1cm4PwP3gbl4qffOtf_8CoYgK' data-callback='onRecaptchaSuccess'>Send</button>
+              <label for="message" id="message" class="fcf-label">Message <span class="asterisk">*</span></label>
+              <textarea name="message" id="message" class="fcf-form-control" value="Send" aria-labelledby="message"  rows="5" maxlength="3000" required></textarea>
+              
             </div>
+            <div class="fcf-form-group">
+              <div class="g-recaptcha" data-sitekey="6LfbKjIkAAAAAKP1cm4PwP3gbl4qffOtf_8CoYgK" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+              
+            </div>
+            <div class="fcf-form-group">
+              <button type="submit" name="submit" id="fcf-button">send</button>
+            </div>
+            
           </form>
-        </div>  
-
+            
+        </div>
       </div>  
 
     </div> 
@@ -328,8 +335,7 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
