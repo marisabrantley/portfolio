@@ -87,6 +87,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*** MAIN PAGE ***/
+   
 /* General Styles */
 
 html {
@@ -330,7 +332,7 @@ footer p {
 }
 
 footer span {
-  color: pink;
+  color: #ffc0cb;
 }
 
 /* General Dark Mode Styles */
@@ -596,7 +598,6 @@ header #contact-link {
 .contact-form {
   display: none;
 }
-
 
 /* ==========================================================================
    Helper classes
@@ -1193,6 +1194,10 @@ header #contact-link {
     transform: scale(1.05);
   }
 
+  #contact .g-recaptcha {
+    padding: 15px 0;
+  }
+
   /* Desktop Dark Mode */
 
   .dark-mode .nav-list {
@@ -1232,6 +1237,81 @@ header #contact-link {
   .dark-mode textarea {
     background-color: #d7cfc0;
   }
+
+
+    /*** THANK YOU PAGE ***/
+
+  .thank-you-container {
+    text-align: center;
+    background-color: #01285d;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .thank-you-container .thank-you-icon {
+    color: #17B794;
+    font-size: 13rem;
+    text-align: center;
+    padding-top: 200px;
+  }
+
+  .thank-you-container h1 {
+    color: #d7cfc0;
+    letter-spacing: 3px;
+    font-size: 3.5rem;
+    margin: 35px;
+  }
+
+  .thank-you-container h4 {
+    color: #d7cfc0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+  }
+
+  .thank-you-container .home-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ffc0cb;
+    color: #01285d;
+    border-radius: 15px;
+    padding: 10px 36px;
+    transition-duration: 0.4s;
+    border: none;
+  }
+
+  .thank-you-container .home-link:hover {
+    background-color: #fe99aa;
+  }
+
+  .thank-you-container .social-media {
+    display: flex;
+    justify-content: center;
+  }
+
+  .thank-you-container .content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    margin: 0;
+    padding-top: 100px;
+  }
+
+  .thank-you-container .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+  }
+
+  .thank-you-container .social-icons i {
+    font-size: 2.75rem;
+    color: #d7cfc0;
+    justify-content: space-around;
+  }
+
 
 } 
 

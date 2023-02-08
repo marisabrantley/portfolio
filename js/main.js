@@ -1,4 +1,5 @@
 // Dark Mode
+
 const button = document.getElementById('checkbox');
 
 const useDark = window.matchMedia('(prefers-color-scheme: dark)');

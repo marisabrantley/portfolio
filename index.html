@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Meet Marisa Brantley, Web Developer</title>
+  <title>Marisa Brantley, Web Developer</title>
   <link rel="icon" type="image/x-icon" href="/img/favicon.png">
   <meta name="description" content="Portfolio of Marisa Brantley">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,6 @@
   <meta property="og:title" content="Marisa Brantley's Portfolio">
   <meta property="og:type" content="website">
   <meta property="og:url" content="www.marisabrantley.com">
-  <meta property="og:image" content="img/marisa-brantley-logo.png">
   <meta name="color-scheme" content="light dark">
   
   <link rel="manifest" href="site.webmanifest">
@@ -25,8 +24,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" >
   <link rel="preconnect" href="https://www.google.com">
-  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>  
-
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  
 </head>
 
 <body>
@@ -289,37 +288,38 @@
 
         <div class="form-container">
         
-          <form action="contactform.php" method="POST" name="contactform" id="contact-form" class="fcf-form-class" role="form">
+          <form action="https://formsubmit.co/hello@marisabrantley.com" name="contactform" id="contactForm" class="fcf-form-class" method="POST">
             
             <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
             <div class="fcf-form-group">
               <label for="name" class="fcf-label">Name <span class="asterisk">*</span></label>
-              <input type="text" name="name" id="name" class="fcf-form-control" aria-labelledby="name" required>
-              
+              <input type="text" name="name" id="name" class="fcf-form-control" aria-labelledby="name" required> 
+            </div>
+            <div class="fcf-form-group">
+              <label for="company" class="fcf-label">Company</label>
+              <input type="text" name="company" id="company" class="fcf-form-control" aria-labelledby="company">
             </div>
             <div class="fcf-form-group">
               <label for="email" class="fcf-label">Email Address <span class="asterisk">*</span></label>
-              <input type="email" name="email" id="email" class="fcf-form-control" aria-labelledby="email" required >
-              
+              <input type="email" name="email" id="email" class="fcf-form-control" aria-labelledby="email" required>
             </div>
             <div class="fcf-form-group">
-              <label for="subject" class="fcf-label">Subject</label>
-              <input type="text" name="subject" id="subject" class="fcf-form-control" aria-labelledby="subject">
-              
+              <label for="phone" class="fcf-label">Phone Number</label>
+              <input type="text" name="phone" id="phone" class="fcf-form-control" aria-labelledby="phone number">
             </div>
             <div class="fcf-form-group">
               <label for="message" id="message" class="fcf-label">Message <span class="asterisk">*</span></label>
               <textarea name="message" id="message" class="fcf-form-control" value="Send" aria-labelledby="message"  rows="5" maxlength="3000" required></textarea>
-              
-            </div>
-            <div class="fcf-form-group">
-              <div class="g-recaptcha" data-sitekey="6LfbKjIkAAAAAKP1cm4PwP3gbl4qffOtf_8CoYgK" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-              
             </div>
             <div class="fcf-form-group">
               <button type="submit" name="submit" id="fcf-button">send</button>
-            </div>
-            
+            </div> 
+            <div class="fcf-form-group">
+              <input type="hidden" name="_next" value="https://marisabrantley.com/thankyou.html">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="text" name="_honey" style="display:none">
+              <input type="hidden" name="_subject" value="Message from Contact Form">
+            </div> 
           </form>
             
         </div>
@@ -335,17 +335,13 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
-  <script src="fcf-assets/js/fcf.form.js"></script>
-  
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    ga('create', 'UA-121690020-1', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 
