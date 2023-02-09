@@ -94,7 +94,6 @@
   </header>
 
   <main>
-    <article class="portfolio">
     
       <section id="about">
         <div class="content-wrapper">
@@ -106,7 +105,7 @@
               <h3>
                 Hi! I'm Marisa Brantley.
               </h3>
-              <h4>I'm a Frontend Developer and UI Designer who empathecially creates accessible, engaging, functional, and aesthetically pleasing websites.</h4>
+              <h4>I'm a Frontend Developer and UI Designer who empathetically creates accessible, engaging, functional, and aesthetically pleasing websites.</h4>
               <p class="about-text">
                 My coding journey began when I needed a website for my online retail business. I took the initiative to learn to do it myself, and my love of coding bloomed.
               </p>
@@ -217,8 +216,6 @@
       </div>
     </section>
 
-  </article>
-
   </main>
 
   <div id="contact">
@@ -230,7 +227,7 @@
           <div class="contact-info">
             <ul class="location">
               <li>
-                <a href="https://www.google.com/maps/place/Orange+County,+CA/@33.640814,-117.7803964,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428" aria-label="Clickable icon to see location of Orange County on map" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+                <i class="fa-solid fa-location-dot"></i>
               </li>
               <li>
                 <a href="https://www.google.com/maps/place/Orange+County,+CA/@33.640814,-117.7803964,10z/data=!3m1!4b1!4m5!3m4!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607!8m2!3d33.7174708!4d-117.8311428" target="_blank">Orange County, California</a>
@@ -238,7 +235,7 @@
             </ul>
             <ul class="telephone">
               <li>
-                <a href="tel:949-342-6820" aria-label="Clickable icon of telephone to call phone number"><i class="fa-solid fa-mobile-screen-button"></i></a>
+                <i class="fa-solid fa-mobile-screen-button"></i>
               </li>
               <li>
                 <a href="tel:949-342-6820">(949) 342-6820</a>‬
@@ -246,7 +243,7 @@
             </ul> 
             <ul class="email">
               <li>
-                <a href="mailto:marisakbrantley@gmail.com" aria-label="Clickable icon to send email"><i class="fa-solid fa-envelope"></i></a>
+                <i class="fa-solid fa-envelope"></i>
               </li>
               <li>
                 <a href="mailto:marisakbrantley@gmail.com">marisakbrantley@gmail.com</a>
@@ -288,7 +285,7 @@
 
         <div class="form-container">
         
-          <form action="https://formsubmit.co/hello@marisabrantley.com" name="contactform" id="contactForm" class="fcf-form-class" method="POST">
+          <form action="https://formsubmit.co/hello@marisabrantley.com" name="contactform" id="contactForm" class="fcf-form-class" autocomplete="off" method="POST">
             
             <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
             <div class="fcf-form-group">
@@ -305,20 +302,21 @@
             </div>
             <div class="fcf-form-group">
               <label for="phone" class="fcf-label">Phone Number</label>
-              <input type="text" name="phone" id="phone" class="fcf-form-control" aria-labelledby="phone number">
+              <input type="text" name="phonenumber" id="phone" class="fcf-form-control" aria-labelledby="phone">
             </div>
             <div class="fcf-form-group">
-              <label for="message" id="message" class="fcf-label">Message <span class="asterisk">*</span></label>
-              <textarea name="message" id="message" class="fcf-form-control" value="Send" aria-labelledby="message"  rows="5" maxlength="3000" required></textarea>
+              <label for="message" class="fcf-label">Message <span class="asterisk">*</span></label>
+              <textarea name="message" id="message" class="fcf-form-control" aria-labelledby="message"  rows="5" maxlength="3000" required></textarea>
             </div>
             <div class="fcf-form-group">
-              <button type="submit" name="submit" id="fcf-button">send</button>
+              <input type="submit" name="submit" value="Send Message" id="button" aria-labelledby="button">
             </div> 
             <div class="fcf-form-group">
+              <label for="_honey" class="fcf-label" id="honeypot" aria-hidden="true">Honeypot</label>
+              <input type="text" name="_honey" id="_honey" style="display:none">
               <input type="hidden" name="_next" value="https://marisabrantley.com/thankyou.html">
               <input type="hidden" name="_captcha" value="false">
-              <input type="text" name="_honey" style="display:none">
-              <input type="hidden" name="_subject" value="Message from Contact Form">
+              <input type="hidden" name="_subject" value="Message from Your Contact Form!">
             </div> 
           </form>
             

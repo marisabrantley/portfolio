@@ -15,6 +15,7 @@ html {
   color: #222;
   font-size: 1rem;
   line-height: 1.4;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -272,6 +273,11 @@ header .name-title {
   position: absolute;
 }
 
+.checkbox:focus-visible + label {
+  outline: 1.5px solid white;
+  outline-offset: 5px;
+}
+
 
 .label {
   background-color: #01285d;
@@ -388,6 +394,11 @@ footer span {
 .dark-mode .skills-wrapper p,
 .dark-mode .tools-wrapper p {
   background-color: #2B4865;
+}
+
+.dark-mode .checkbox:focus-visible + label {
+  outline: 1.5px solid #d7cfc0;
+  outline-offset: 5px;
 }
 
 .dark-mode .label {
@@ -1151,8 +1162,13 @@ header #contact-link {
     font-size: 1.1rem;
   }
 
-  #contact input[type=text], input[type=email], select, textarea {
+  #contact input[type=text], 
+  #contact input[type=email], 
+  #contact select, 
+  #contact textarea {
     width: 100%;
+    background-color: white;
+    color: #222;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -1160,6 +1176,14 @@ header #contact-link {
     margin-top: 3px;
     margin-bottom: 15px;
     resize: vertical;
+    outline: none;
+  }
+
+  #contact input[type=text]:focus, 
+  #contact input[type=email]:focus, 
+  #contact select:focus, 
+  #contact textarea:focus {
+    border: 2px solid #01285d;
   }
 
   #contact form .indicates-required {
@@ -1173,7 +1197,11 @@ header #contact-link {
     color: #01285d;
   }
 
-  #contact button {
+  #contact form #honeypot {
+   display: none;
+  }
+
+  #contact #button {
     text-align: center;
     font-size: 1.1rem;
     color: #01285d;
@@ -1189,7 +1217,7 @@ header #contact-link {
     transition-duration: 0.4s;
   }
 
-  #contact button:hover {
+  #contact #button:hover {
     background-color: #fe99aa;
     transform: scale(1.05);
   }
@@ -1233,15 +1261,26 @@ header #contact-link {
     color: #d7cfc0;
   }
 
-  .dark-mode input,
-  .dark-mode textarea {
+  .dark-mode #contact input[type=text], 
+  .dark-mode #contact input[type=email],
+  .dark-mode #contact select,
+  .dark-mode #contact textarea {
     background-color: #d7cfc0;
+    color: #0c1a35;
+    outline: none;
+  }
+
+  .dark-mode #contact input[type=text]:focus, 
+  .dark-mode #contact input[type=email]:focus,
+  .dark-mode #contact select:focus,
+  .dark-mode #contact textarea:focus {
+    border: 2px solid #17B794;
   }
 
 
     /*** THANK YOU PAGE ***/
 
-  .thank-you-container {
+  .thank-you-container{
     text-align: center;
     background-color: #01285d;
     height: 100vh;
