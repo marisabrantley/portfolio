@@ -1238,7 +1238,7 @@ header #contact-link {
 
   .dark-mode header #contact-link:hover,
   .dark-mode .project-link:hover,
-  .dark-mode #contact button {
+  .dark-mode #contact #button {
     background-color: #14a485;
   }
 
