@@ -4,7 +4,7 @@
   "description": "Portolio Website of Marisa Brantley",
   "keywords": "web developer",
   "license": "",
-  "author": "Narisa Brantley",
+  "author": "Marisa Brantley",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
