@@ -848,7 +848,7 @@ header #contact-link {
   /* General Styles */
 
   .content-wrapper {
-    max-width: 1450px;
+    max-width: 1440px;
   }
 
   #projects h2,
@@ -1049,6 +1049,8 @@ header #contact-link {
     transform: scale(1.1);
   }
   
+ /* Skills Section Styles */
+
   #skills .content-wrapper {
     width: 90%;
     display: flex;
@@ -1280,10 +1282,9 @@ header #contact-link {
 
     /*** THANK YOU PAGE ***/
 
-  .thank-you-container{
+  .thank-you-page{
     text-align: center;
     background-color: #01285d;
-    height: 100vh;
     margin: 0;
   }
 
@@ -1328,6 +1329,7 @@ header #contact-link {
   .thank-you-container .social-media {
     display: flex;
     justify-content: center;
+    padding-bottom: 200px;
   }
 
   .thank-you-container .content-wrapper {
