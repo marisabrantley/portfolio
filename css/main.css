@@ -931,12 +931,6 @@ header #contact-link {
     transform: scale(1.2);
   }
 
-  /* Dark Mode Toggle Button */
-
-  .toggle-button {
-    padding: 0;
-  }
-
   /* Footer Styles */
 
   footer {
@@ -1021,13 +1015,13 @@ header #contact-link {
   /* Projects Section Styles */
 
   #projects .content-wrapper {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
   }
 
   #projects .project-piece {
     align-items: center;
-    width: 30%;
+    width: 28%;
     display: flex;
     justify-content: space-around;
     align-items: center;
