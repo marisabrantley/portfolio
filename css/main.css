@@ -136,8 +136,10 @@ h2 {
 }
 
 h3 {
-  font-size: 1.7rem;
-  font-family: 'Cardo', serif;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-align: center;
   width: 100%;
 }
 
@@ -418,11 +420,12 @@ header .name-title h1 {
   margin-bottom: 10px;
 }
 
-header .name-title h4 {
-  font-size: 1.2rem;
+header .name-title #job-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
   font-weight: 300;
-  margin-top: 0;
-  padding: 0 70px;
+  text-transform: none;
+  padding: 0 70px 24px;
 }
 
 header #contact-link {
@@ -457,6 +460,11 @@ header #contact-link {
 
 #about #profile-image {
   padding-bottom: 20px;
+}
+
+#about .about-me h3 {
+  font-size: 1.8rem;
+  font-family: 'Cardo', serif;
 }
 
 #about .about-me h3,
@@ -525,7 +533,7 @@ header #contact-link {
 }
 
 #skills h2 {
-  padding-bottom: 0;
+  padding-bottom: 20px;
 }
 
 #skills h4 {
@@ -564,6 +572,10 @@ header #contact-link {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+#contact h2 {
+  padding-bottom: 20px;
 }
 
 #contact h4 {
@@ -719,7 +731,7 @@ header #contact-link {
     font-size: 2rem;
   }
 
-  header .name-title h4 {
+  header .name-title #job-title {
     font-size: 1.3rem;
   }
 
@@ -882,7 +894,7 @@ header #contact-link {
     font-weight: 500;
   }
   
-  header .name-title h4 {
+  header .name-title #job-title {
     font-size: 1.4rem;
     padding-bottom: 25px;
   }
@@ -1019,6 +1031,10 @@ header #contact-link {
     margin: 0 auto;
   }
 
+  #projects h2 {
+    padding-bottom: 80px;
+  }
+
   #projects .project-piece {
     align-items: center;
     width: 28%;
@@ -1070,7 +1086,7 @@ header #contact-link {
   #skills h2 {
     font-size: 2.3rem;
     font-weight: 500;
-    padding-top: 130px;
+    padding: 130px 0 36px;
   }
 
   #skills h4 {
@@ -1099,7 +1115,11 @@ header #contact-link {
     text-align: left;
   }
 
-  #contact h4 {
+  #contact h2 {
+    padding-bottom: 60px;
+  }
+
+  #contact h3 {
     font-size: 1.7rem;
     text-align: left;
   }
@@ -1191,10 +1211,6 @@ header #contact-link {
   #contact form .indicates-required span,
   #contact form label span {
     color: #01285d;
-  }
-
-  #contact form #honeypot {
-   display: none;
   }
 
   #contact #button {
